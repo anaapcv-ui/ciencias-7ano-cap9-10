@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📌 Resumo — Expedição Mar & Terra | Ciências 7º ano</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  :root{--mar-fundo:#0b3d5c;--mar:#0e7c6b;--mar-claro:#13a58e;--coral:#ef6a4b;--coral-d:#d64d30;--areia:#f5ecd9;--areia2:#ece0c6;--texto:#22323d;--ok:#1f9d57;--amarelo:#ffe08a;--vermelho:#d64430;--terra:#b6702f;}
+  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:16px;
+    background:radial-gradient(circle at 8% 6%,rgba(19,165,142,.16),transparent 40%),radial-gradient(circle at 92% 12%,rgba(239,106,75,.13),transparent 42%),linear-gradient(170deg,#f7efdd,#f1e6cd 60%,#f5ecd9);background-attachment:fixed;min-height:100vh;}
+  .wrap{max-width:860px;margin:0 auto;}
+  h1,h2,h3,.tt{font-family:'Baloo 2',cursive;}
+  .capa{background:linear-gradient(135deg,var(--mar-fundo),var(--mar) 70%,var(--mar-claro));color:#fff;border-radius:22px;padding:28px 24px;text-align:center;box-shadow:0 12px 32px rgba(11,61,92,.35);margin-bottom:16px;border:3px solid #0a2f47;}
+  .badge{display:inline-block;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:800;letter-spacing:1.5px;font-size:.72em;padding:5px 14px;border-radius:20px;margin-bottom:10px;}
+  .capa h1{font-size:1.9em;text-shadow:0 2px 10px rgba(0,0,0,.35);}
+  .capa .sub{color:#eafff8;margin-top:4px;}
+  .painel{background:#fffdf7;border:2px solid var(--mar);border-radius:14px;padding:12px 16px;margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+  .painel .status{flex:1;min-width:170px;font-size:.85em;color:#4a6a63;}.painel .status b{color:var(--mar);}
+  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.85em;cursor:pointer;transition:.2s;}.btn:hover{transform:translateY(-2px);}
+  .btn-mar{background:var(--mar);color:#fff;}.btn-areia{background:var(--areia2);color:#5c4a2e;}.btn-ghost{background:#eee;color:#666;}
+  .progresso{position:sticky;top:8px;z-index:20;background:#fffdf7;border:2px solid var(--mar);border-radius:30px;padding:8px 14px;margin-bottom:18px;box-shadow:0 5px 16px rgba(11,61,92,.15);display:flex;align-items:center;gap:10px;}
+  .barra{flex:1;height:14px;background:var(--areia2);border-radius:10px;overflow:hidden;}.barra>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mar),var(--mar-claro));transition:width .5s;}
+  .progresso .pnum{font-weight:800;color:var(--mar);font-size:.9em;white-space:nowrap;}
+  h2.sec{color:var(--mar-fundo);margin:22px 0 12px;font-size:1.4em;border-bottom:3px solid var(--areia2);padding-bottom:6px;}
+  .card{background:#fffdf7;border:2px solid var(--areia2);border-radius:16px;padding:18px 20px;margin-bottom:14px;box-shadow:0 5px 16px rgba(11,61,92,.08);}
+  .card.estudado{border-color:var(--ok);background:#f5fbf7;}
+  .card h3{color:var(--mar);font-size:1.2em;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+  .card ul{margin:6px 0 0 20px;}.card li{margin-bottom:5px;}.card b{color:var(--coral-d);}
+  .estudei{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:700;color:#5c4a2e;cursor:pointer;font-size:.9em;background:var(--areia);padding:6px 12px;border-radius:20px;}
+  .estudei input{width:18px;height:18px;cursor:pointer;}
+  .postit{background:var(--amarelo);border-radius:4px;padding:12px 16px;margin:10px 0;box-shadow:2px 3px 8px rgba(0,0,0,.15);transform:rotate(-1.2deg);font-size:.95em;color:#5a4600;border:1px solid #f0cf6a;}
+  .postit b{color:#8a5a00;}
+  .peg{background:#fdece8;border:2px solid var(--vermelho);border-radius:14px;padding:14px 18px;margin:10px 0;}
+  .peg b{color:var(--vermelho);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+  .flip{background:transparent;height:210px;perspective:1000px;cursor:pointer;}
+  .flip-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;}
+  .flip.virado .flip-inner{transform:rotateY(180deg);}
+  .face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 5px 16px rgba(11,61,92,.14);}
+  .front{background:linear-gradient(135deg,var(--mar),var(--mar-claro));color:#fff;text-align:center;}
+  .front .em{font-size:2.6em;}.front .nm{font-family:'Baloo 2';font-size:1.2em;margin-top:6px;}.front .toque{font-size:.75em;opacity:.85;margin-top:10px;}
+  .back{background:#fffdf7;border:2px solid var(--mar);transform:rotateY(180deg);font-size:.9em;overflow:auto;}
+  .back h4{color:var(--coral-d);font-family:'Baloo 2';margin-bottom:6px;}.back ul{margin-left:16px;}.back li{margin-bottom:3px;}
+  .gloss{background:#fffdf7;border:2px solid var(--terra);border-radius:14px;padding:16px 20px;margin:10px 0 20px;}
+  .gloss h3{color:var(--terra);margin-bottom:8px;}
+  .gloss dt{font-weight:800;color:var(--mar-fundo);margin-top:8px;}.gloss dd{margin-left:0;color:#4a5a5a;}
+  .rodape{text-align:center;color:#7a6a4c;font-style:italic;padding:14px;font-size:.9em;}
+  @media(max-width:560px){.capa h1{font-size:1.4em;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="capa">
+    <div class="badge">CIÊNCIAS · 7º ANO · RESUMO</div>
+    <h1>📌 Resumo — Expedição Mar &amp; Terra</h1>
+    <div class="sub">Invertebrados (Cap. 9) e Artrópodes (Cap. 10)</div>
+  </div>
+
+  <div class="painel">
+    <div class="status">💾 Salvo neste navegador.<br><b id="lastSaved">Nada salvo ainda.</b></div>
+    <button class="btn btn-mar" onclick="exportar()">📥 Exportar</button>
+    <button class="btn btn-areia" onclick="document.getElementById('imp').click()">📤 Importar</button>
+    <input type="file" id="imp" accept="application/json" style="display:none" onchange="importar(event)">
+    <button class="btn btn-ghost" onclick="zerar()">🗑️ Zerar</button>
+  </div>
+
+  <div class="progresso"><span class="pnum" id="pnum">0/0</span><div class="barra"><i id="barraFill"></i></div></div>
+
+  <h2 class="sec">🌊 No fundo do mar: os invertebrados mais simples</h2>
+
+  <div class="card" data-id="poriferos">
+    <h3>🧽 Poríferos (esponjas)</h3>
+    <ul>
+      <li>Vivem <b>fixos</b> no fundo do mar; corpo cheio de <b>poros</b>.</li>
+      <li>São <b>filtradores</b>: filtram a água para pegar alimento.</li>
+      <li>Sustentação e defesa: <b>espongina</b> (proteína) e <b>espículas</b> (agulhinhas).</li>
+      <li>Não têm tecidos nem órgãos — mas as células fazem tudo.</li>
+    </ul>
+    <div class="postit">💛 <b>Dica:</b> esponja não é planta nem caça — ela <b>filtra</b> a água paradinha no lugar.</div>
+    <label class="estudei"><input type="checkbox" onchange="marcar('poriferos',this.checked)"> Já estudei</label>
+  </div>
+
+  <div class="card" data-id="cnidarios">
+    <h3>🪼 Cnidários (águas-vivas, corais, anêmonas)</h3>
+    <ul>
+      <li>Têm <b>cnidócitos</b>: células urticantes que <b>queimam</b> para capturar e se defender.</li>
+      <li>Duas formas: <b>pólipo</b> (fixo) e <b>medusa</b> (nada livre).</li>
+      <li>Alguns fazem <b>alternância de gerações</b> (trocam de forma na vida).</li>
+    </ul>
+    <div class="grid" style="margin-top:12px;">
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🌸</div><div class="nm">Pólipo</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Pólipo</h4><ul><li>Forma <b>fixa</b></li><li>Ex.: anêmona, coral</li><li>Boca voltada para cima</li></ul></div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🪼</div><div class="nm">Medusa</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Medusa</h4><ul><li>Forma <b>livre</b>, que nada</li><li>Ex.: água-viva</li><li>Boca voltada para baixo</li></ul></div>
+      </div></div>
+    </div>
+    <label class="estudei"><input type="checkbox" onchange="marcar('cnidarios',this.checked)"> Já estudei</label>
+  </div>
+
+  <h2 class="sec">🪱 Os vermes (e as verminoses)</h2>
+
+  <div class="card" data-id="vermes">
+    <h3>🎗️ Platelmintos e 🪱 Nematoides</h3>
+    <div class="grid" style="margin-bottom:10px;">
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🎗️</div><div class="nm">Platelmintos</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Platelmintos (achatados)</h4><ul><li>Corpo <b>achatado</b> (fita)</li><li><b>Tênia</b> → teníase / cisticercose</li><li><b>Esquistossomo</b> → esquistossomose (na água, com caramujo)</li></ul></div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🪱</div><div class="nm">Nematoides</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Nematoides (cilíndricos)</h4><ul><li>Corpo <b>cilíndrico</b> (redondo)</li><li><b>Lombriga</b> (Ascaris) → ascaridíase</li><li><b>Ancilóstomo</b> → amarelão (fura a pele do pé)</li></ul></div>
+      </div></div>
+    </div>
+    <div class="peg">⚠️ <b>Não confunda:</b> platelminto = <b>achatado</b> (fita) • nematoide = <b>cilíndrico</b> (redondo). O formato quase sempre cai na prova!</div>
+    <label class="estudei"><input type="checkbox" onchange="marcar('vermes',this.checked)"> Já estudei</label>
+  </div>
+
+  <div class="card" data-id="verminoses">
+    <h3>🧼 Prevenção das verminoses</h3>
+    <ul>
+      <li><b>Lavar</b> as mãos e os alimentos; <b>beber água tratada</b>.</li>
+      <li>Ter <b>saneamento básico</b> (esgoto tratado).</li>
+      <li><b>Andar calçado</b> (contra o amarelão); <b>cozinhar bem a carne</b> (contra a tênia).</li>
+    </ul>
+    <div class="postit">💛 <b>Dica:</b> estudar o <b>ciclo de vida</b> do verme mostra onde dá para "cortar" a transmissão.</div>
+    <label class="estudei"><input type="checkbox" onchange="marcar('verminoses',this.checked)"> Já estudei</label>
+  </div>
+
+  <h2 class="sec">🦾 Os artrópodes (o maior grupo de todos!)</h2>
+
+  <div class="card" data-id="artropodes">
+    <h3>🦾 Características gerais</h3>
+    <ul>
+      <li><b>Exoesqueleto de quitina</b>: armadura por fora que protege e evita ressecar.</li>
+      <li><b>Patas articuladas</b> (com juntas que dobram).</li>
+      <li><b>Muda / ecdise</b>: trocam o exoesqueleto para poder crescer.</li>
+      <li>É o <b>maior filo</b> do reino animal — vivem no mar e na terra.</li>
+    </ul>
+    <div class="postit">💛 <b>Macete das patas:</b> Inseto = <b>6</b> • Aracnídeo = <b>8</b> • Crustáceos e miriápodes = <b>muitas</b>.</div>
+    <label class="estudei"><input type="checkbox" onchange="marcar('artropodes',this.checked)"> Já estudei</label>
+  </div>
+
+  <div class="card" data-id="grupos">
+    <h3>🔄 Os 4 grupos (vire os cards!)</h3>
+    <div class="grid">
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🐝</div><div class="nm">Insetos</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Insetos</h4><ul><li><b>6 patas</b> (3 pares)</li><li>Corpo: cabeça, tórax, abdome</li><li>1 par de antenas; muitos com <b>asas</b></li><li>Ex.: besouro, abelha, formiga</li></ul></div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🕷️</div><div class="nm">Aracnídeos</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Aracnídeos</h4><ul><li><b>8 patas</b> (4 pares)</li><li><b>Sem antenas</b></li><li>Ex.: aranha, escorpião, carrapato</li></ul></div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🦐</div><div class="nm">Crustáceos</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Crustáceos</h4><ul><li>Maioria <b>aquática</b></li><li>Exoesqueleto com <b>calcário</b> (bem duro)</li><li><b>2 pares de antenas</b></li><li>Ex.: camarão, caranguejo, siri</li></ul></div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+        <div class="face front"><div class="em">🐛</div><div class="nm">Miriápodes</div><div class="toque">toque para virar</div></div>
+        <div class="face back"><h4>Miriápodes</h4><ul><li><b>Quilópode</b> (lacraia): 1 par/segmento, <b>peçonhento</b></li><li><b>Diplópode</b> (piolho-de-cobra): 2 pares/segmento, inofensivo</li></ul></div>
+      </div></div>
+    </div>
+    <label class="estudei"><input type="checkbox" onchange="marcar('grupos',this.checked)"> Já estudei</label>
+  </div>
+
+  <div class="gloss">
+    <h3>📖 Glossário</h3>
+    <dl>
+      <dt>Filtrador</dt><dd>Animal que filtra a água para retirar o alimento (ex.: esponja).</dd>
+      <dt>Cnidócito</dt><dd>Célula urticante dos cnidários, que "queima" para capturar e defender.</dd>
+      <dt>Pólipo / Medusa</dt><dd>Formas do cnidário: pólipo é fixo; medusa nada livre.</dd>
+      <dt>Exoesqueleto</dt><dd>Esqueleto externo (armadura) de quitina, típico dos artrópodes.</dd>
+      <dt>Quitina</dt><dd>Substância que forma o exoesqueleto dos artrópodes.</dd>
+      <dt>Muda (ecdise)</dt><dd>Troca do exoesqueleto para o artrópode poder crescer.</dd>
+      <dt>Verminose</dt><dd>Doença causada por vermes parasitas (ex.: teníase, ascaridíase).</dd>
+      <dt>Peçonhento</dt><dd>Animal que injeta veneno (ex.: lacraia, escorpião).</dd>
+    </dl>
+  </div>
+
+  <div class="rodape">Resumo • Kit 🌊 Expedição Mar &amp; Terra</div>
+</div>
+
+<script>
+const CARDS=['poriferos','cnidarios','vermes','verminoses','artropodes','grupos'];
+const KEY='resumo_ciencias_cap9_10_v1';
+let estado={estudados:{},lastSaved:null};
+function carregar(){try{const s=localStorage.getItem(KEY);if(s)estado=Object.assign(estado,JSON.parse(s));}catch(e){}}
+function salvar(){estado.lastSaved=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(estado));mostrarSalvo();}
+function mostrarSalvo(){const el=document.getElementById('lastSaved');if(!estado.lastSaved){el.textContent='Nada salvo ainda.';return;}const d=new Date(estado.lastSaved);el.textContent='Último salvamento: '+d.toLocaleDateString('pt-BR')+' às '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}
+function marcar(id,val){estado.estudados[id]=val;salvar();aplicar();}
+function aplicar(){
+  CARDS.forEach(id=>{const c=document.querySelector('.card[data-id="'+id+'"]');if(!c)return;const chk=c.querySelector('input[type=checkbox]');chk.checked=!!estado.estudados[id];c.classList.toggle('estudado',!!estado.estudados[id]);});
+  const feitos=CARDS.filter(id=>estado.estudados[id]).length;
+  document.getElementById('pnum').textContent=feitos+'/'+CARDS.length;
+  document.getElementById('barraFill').style.width=(feitos/CARDS.length*100)+'%';
+}
+function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso_resumo_ciencias.json';a.click();}
+function importar(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{estado=Object.assign({estudados:{}},JSON.parse(e.target.result));salvar();aplicar();alert('Progresso importado! ✅');}catch(err){alert('Arquivo inválido. 😕');}};r.readAsText(f);}
+function zerar(){if(!confirm('Isso apaga as marcações para outra criança usar. Tem certeza?'))return;estado={estudados:{},lastSaved:null};localStorage.removeItem(KEY);salvar();aplicar();}
+carregar();aplicar();mostrarSalvo();
+</script>
+</body>
+</html>
