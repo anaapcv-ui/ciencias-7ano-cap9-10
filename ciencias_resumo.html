@@ -3,191 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📌 Resumo — Expedição Mar & Terra | Ciências 7º ano</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>🗺️ Resumo — Bairros dos Invertebrados | Ciências 7º ano</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
-  :root{--mar-fundo:#0b3d5c;--mar:#0e7c6b;--mar-claro:#13a58e;--coral:#ef6a4b;--coral-d:#d64d30;--areia:#f5ecd9;--areia2:#ece0c6;--texto:#22323d;--ok:#1f9d57;--amarelo:#ffe08a;--vermelho:#d64430;--terra:#b6702f;}
-  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:16px;
-    background:radial-gradient(circle at 8% 6%,rgba(19,165,142,.16),transparent 40%),radial-gradient(circle at 92% 12%,rgba(239,106,75,.13),transparent 42%),linear-gradient(170deg,#f7efdd,#f1e6cd 60%,#f5ecd9);background-attachment:fixed;min-height:100vh;}
-  .wrap{max-width:860px;margin:0 auto;}
-  h1,h2,h3,.tt{font-family:'Baloo 2',cursive;}
-  .capa{background:linear-gradient(135deg,var(--mar-fundo),var(--mar) 70%,var(--mar-claro));color:#fff;border-radius:22px;padding:28px 24px;text-align:center;box-shadow:0 12px 32px rgba(11,61,92,.35);margin-bottom:16px;border:3px solid #0a2f47;}
-  .badge{display:inline-block;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:800;letter-spacing:1.5px;font-size:.72em;padding:5px 14px;border-radius:20px;margin-bottom:10px;}
-  .capa h1{font-size:1.9em;text-shadow:0 2px 10px rgba(0,0,0,.35);}
-  .capa .sub{color:#eafff8;margin-top:4px;}
-  .painel{background:#fffdf7;border:2px solid var(--mar);border-radius:14px;padding:12px 16px;margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
-  .painel .status{flex:1;min-width:170px;font-size:.85em;color:#4a6a63;}.painel .status b{color:var(--mar);}
-  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.85em;cursor:pointer;transition:.2s;}.btn:hover{transform:translateY(-2px);}
-  .btn-mar{background:var(--mar);color:#fff;}.btn-areia{background:var(--areia2);color:#5c4a2e;}.btn-ghost{background:#eee;color:#666;}
-  .progresso{position:sticky;top:8px;z-index:20;background:#fffdf7;border:2px solid var(--mar);border-radius:30px;padding:8px 14px;margin-bottom:18px;box-shadow:0 5px 16px rgba(11,61,92,.15);display:flex;align-items:center;gap:10px;}
-  .barra{flex:1;height:14px;background:var(--areia2);border-radius:10px;overflow:hidden;}.barra>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mar),var(--mar-claro));transition:width .5s;}
-  .progresso .pnum{font-weight:800;color:var(--mar);font-size:.9em;white-space:nowrap;}
-  h2.sec{color:var(--mar-fundo);margin:22px 0 12px;font-size:1.4em;border-bottom:3px solid var(--areia2);padding-bottom:6px;}
-  .card{background:#fffdf7;border:2px solid var(--areia2);border-radius:16px;padding:18px 20px;margin-bottom:14px;box-shadow:0 5px 16px rgba(11,61,92,.08);}
-  .card.estudado{border-color:var(--ok);background:#f5fbf7;}
-  .card h3{color:var(--mar);font-size:1.2em;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
-  .card ul{margin:6px 0 0 20px;}.card li{margin-bottom:5px;}.card b{color:var(--coral-d);}
-  .estudei{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:700;color:#5c4a2e;cursor:pointer;font-size:.9em;background:var(--areia);padding:6px 12px;border-radius:20px;}
+  :root{--mar:#1c8fb8;--mar-d:#0f5f7d;--solo:#a5622f;--solo-d:#7a4520;--blindado:#e0632c;--blindado-d:#b0451a;--cidade:#3a3560;--papel:#fdfaf2;--texto:#2a2a38;--ok:#1f9d57;--amarelo:#ffe486;--vermelho:#d64430;}
+  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:14px;font-size:17px;
+    background:linear-gradient(180deg,#eef5f2,#f3efe6 50%,#eef5f2);min-height:100vh;}
+  .wrap{max-width:900px;margin:0 auto;}
+  h1,h2,h3,.tt{font-family:'Fredoka',sans-serif;}
+  .capa{background:linear-gradient(135deg,var(--cidade),#4a4480 70%,var(--mar));color:#fff;border-radius:24px;padding:28px 22px;text-align:center;box-shadow:0 14px 34px rgba(58,53,96,.35);margin-bottom:16px;border:3px solid #2a2650;position:relative;overflow:hidden;}
+  .capa .sky{position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.15),transparent 30%),radial-gradient(circle at 85% 30%,rgba(255,255,255,.1),transparent 35%);}
+  .badge{display:inline-block;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:800;letter-spacing:1.4px;font-size:.68em;padding:5px 14px;border-radius:20px;margin-bottom:10px;position:relative;}
+  .capa h1{font-size:2em;text-shadow:0 2px 10px rgba(0,0,0,.35);position:relative;}
+  .capa .sub{color:#eef;margin-top:6px;position:relative;}
+  .painel{background:#fff;border:2px solid var(--cidade);border-radius:14px;padding:12px 16px;margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+  .painel .status{flex:1;min-width:170px;font-size:.8em;color:#544e78;}.painel .status b{color:var(--cidade);}
+  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.82em;cursor:pointer;transition:.15s;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-c{background:var(--cidade);color:#fff;}.btn-cin{background:#e7e5f0;color:#544e78;}.btn-ghost{background:#eee;color:#777;}
+  .prog{position:sticky;top:6px;z-index:20;background:#fff;border:2px solid var(--cidade);border-radius:30px;padding:8px 14px;margin-bottom:18px;box-shadow:0 5px 14px rgba(58,53,96,.15);display:flex;align-items:center;gap:10px;}
+  .prog .barra{flex:1;height:14px;background:#e2e0ee;border-radius:10px;overflow:hidden;}.prog .barra>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mar),var(--blindado));transition:.5s;}
+  .prog span{font-weight:800;color:var(--cidade);font-size:.85em;white-space:nowrap;}
+  .distrito{border-radius:20px;padding:6px;margin-bottom:20px;}
+  .dhead{border-radius:16px;padding:16px 20px;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:12px;}
+  .dhead .ic{font-size:2em;}
+  .dhead h2{font-size:1.4em;line-height:1.1;}
+  .dhead .dsub{font-size:.8em;opacity:.92;font-weight:700;}
+  .d-mar .dhead{background:linear-gradient(120deg,var(--mar-d),var(--mar));}
+  .d-solo .dhead{background:linear-gradient(120deg,var(--solo-d),var(--solo));}
+  .d-blindado .dhead{background:linear-gradient(120deg,var(--blindado-d),var(--blindado));}
+  .card{background:var(--papel);border:2px solid #e5ddd0;border-radius:16px;padding:16px 18px;margin-bottom:14px;box-shadow:0 4px 12px rgba(0,0,0,.05);}
+  .card.estudado{border-color:var(--ok);background:#f4fbf6;}
+  .card h3{font-size:1.15em;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+  .d-mar .card h3{color:var(--mar-d);}.d-solo .card h3{color:var(--solo-d);}.d-blindado .card h3{color:var(--blindado-d);}
+  .card ul{margin:6px 0 0 20px;}.card li{margin-bottom:6px;}.card b{color:#c0451a;}
+  .estudei{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:700;color:#5c5540;cursor:pointer;font-size:.85em;background:#efeadd;padding:6px 12px;border-radius:20px;}
   .estudei input{width:18px;height:18px;cursor:pointer;}
-  .postit{background:var(--amarelo);border-radius:4px;padding:12px 16px;margin:10px 0;box-shadow:2px 3px 8px rgba(0,0,0,.15);transform:rotate(-1.2deg);font-size:.95em;color:#5a4600;border:1px solid #f0cf6a;}
-  .postit b{color:#8a5a00;}
-  .peg{background:#fdece8;border:2px solid var(--vermelho);border-radius:14px;padding:14px 18px;margin:10px 0;}
-  .peg b{color:var(--vermelho);}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
-  .flip{background:transparent;height:210px;perspective:1000px;cursor:pointer;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:10px;}
+  .flip{background:transparent;height:230px;perspective:1000px;cursor:pointer;}
   .flip-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;}
   .flip.virado .flip-inner{transform:rotateY(180deg);}
-  .face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 5px 16px rgba(11,61,92,.14);}
-  .front{background:linear-gradient(135deg,var(--mar),var(--mar-claro));color:#fff;text-align:center;}
-  .front .em{font-size:2.6em;}.front .nm{font-family:'Baloo 2';font-size:1.2em;margin-top:6px;}.front .toque{font-size:.75em;opacity:.85;margin-top:10px;}
-  .back{background:#fffdf7;border:2px solid var(--mar);transform:rotateY(180deg);font-size:.9em;overflow:auto;}
-  .back h4{color:var(--coral-d);font-family:'Baloo 2';margin-bottom:6px;}.back ul{margin-left:16px;}.back li{margin-bottom:3px;}
-  .gloss{background:#fffdf7;border:2px solid var(--terra);border-radius:14px;padding:16px 20px;margin:10px 0 20px;}
-  .gloss h3{color:var(--terra);margin-bottom:8px;}
-  .gloss dt{font-weight:800;color:var(--mar-fundo);margin-top:8px;}.gloss dd{margin-left:0;color:#4a5a5a;}
-  .rodape{text-align:center;color:#7a6a4c;font-style:italic;padding:14px;font-size:.9em;}
-  @media(max-width:560px){.capa h1{font-size:1.4em;}}
+  .face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:14px;padding:14px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 5px 14px rgba(0,0,0,.13);}
+  .front{color:#fff;text-align:center;}
+  .front .em{font-size:2.6em;}.front .nm{font-family:'Fredoka';font-size:1.15em;margin-top:6px;}.front .toque{font-size:.72em;opacity:.85;margin-top:8px;}
+  .back{background:#fff;transform:rotateY(180deg);font-size:.86em;overflow:auto;}
+  .back h4{font-family:'Fredoka';margin-bottom:6px;}.back ul{margin-left:16px;}.back li{margin-bottom:3px;}
+  .fm{background:linear-gradient(135deg,var(--mar-d),var(--mar));}.fm2{border:2px solid var(--mar);}.fm2 h4{color:var(--mar-d);}
+  .fs{background:linear-gradient(135deg,var(--solo-d),var(--solo));}.fs2{border:2px solid var(--solo);}.fs2 h4{color:var(--solo-d);}
+  .fb{background:linear-gradient(135deg,var(--blindado-d),var(--blindado));}.fb2{border:2px solid var(--blindado);}.fb2 h4{color:var(--blindado-d);}
+  .postit{background:var(--amarelo);border-radius:4px;padding:12px 16px;margin:12px 0;box-shadow:2px 3px 8px rgba(0,0,0,.15);transform:rotate(-1.1deg);font-size:.92em;color:#5a4600;border:1px solid #f0cf6a;}
+  .postit b{color:#8a5a00;}
+  .peg{background:#fdece8;border:2px solid var(--vermelho);border-radius:14px;padding:14px 18px;margin:12px 0;font-size:.94em;}
+  .peg b{color:var(--vermelho);}
+  .tabela{width:100%;border-collapse:collapse;margin:10px 0;font-size:.9em;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+  .tabela th{background:var(--blindado-d);color:#fff;padding:9px;font-family:'Fredoka';font-weight:600;}
+  .tabela td{padding:9px;border-bottom:1px solid #eee;text-align:center;}
+  .tabela tr:nth-child(even){background:#faf6ef;}
+  .tabela td:first-child{text-align:left;font-weight:700;}
+  .gloss{background:#fff;border:2px solid var(--cidade);border-radius:16px;padding:16px 20px;margin:16px 0;}
+  .gloss h3{color:var(--cidade);margin-bottom:8px;}
+  .gloss dt{font-weight:800;color:var(--mar-d);margin-top:8px;}.gloss dd{color:#555;}
+  .rodape{text-align:center;color:#6f6a85;font-style:italic;padding:14px;font-size:.85em;}
+  @media(max-width:560px){.capa h1{font-size:1.5em;}body{font-size:16px;}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="capa">
+    <div class="sky"></div>
     <div class="badge">CIÊNCIAS · 7º ANO · RESUMO</div>
-    <h1>📌 Resumo — Expedição Mar &amp; Terra</h1>
-    <div class="sub">Invertebrados (Cap. 9) e Artrópodes (Cap. 10)</div>
+    <h1>🗺️ Bairros dos Invertebrados</h1>
+    <div class="sub">Cap. 9 — Moluscos e Anelídeos · Cap. 10 — Artrópodes</div>
   </div>
 
   <div class="painel">
     <div class="status">💾 Salvo neste navegador.<br><b id="lastSaved">Nada salvo ainda.</b></div>
-    <button class="btn btn-mar" onclick="exportar()">📥 Exportar</button>
-    <button class="btn btn-areia" onclick="document.getElementById('imp').click()">📤 Importar</button>
+    <button class="btn btn-c" onclick="exportar()">📥 Exportar</button>
+    <button class="btn btn-cin" onclick="document.getElementById('imp').click()">📤 Importar</button>
     <input type="file" id="imp" accept="application/json" style="display:none" onchange="importar(event)">
     <button class="btn btn-ghost" onclick="zerar()">🗑️ Zerar</button>
   </div>
 
-  <div class="progresso"><span class="pnum" id="pnum">0/0</span><div class="barra"><i id="barraFill"></i></div></div>
+  <div class="prog"><span id="pnum">0/9</span><div class="barra"><i id="barraFill"></i></div><span>fichas estudadas</span></div>
 
-  <h2 class="sec">🌊 No fundo do mar: os invertebrados mais simples</h2>
-
-  <div class="card" data-id="poriferos">
-    <h3>🧽 Poríferos (esponjas)</h3>
-    <ul>
-      <li>Vivem <b>fixos</b> no fundo do mar; corpo cheio de <b>poros</b>.</li>
-      <li>São <b>filtradores</b>: filtram a água para pegar alimento.</li>
-      <li>Sustentação e defesa: <b>espongina</b> (proteína) e <b>espículas</b> (agulhinhas).</li>
-      <li>Não têm tecidos nem órgãos — mas as células fazem tudo.</li>
-    </ul>
-    <div class="postit">💛 <b>Dica:</b> esponja não é planta nem caça — ela <b>filtra</b> a água paradinha no lugar.</div>
-    <label class="estudei"><input type="checkbox" onchange="marcar('poriferos',this.checked)"> Já estudei</label>
+  <div style="background:#fff;border:2px dashed var(--cidade);border-radius:14px;padding:12px 16px;margin-bottom:18px;font-size:.9em;color:#544e78;">
+    🏙️ A cidade tem <b>3 bairros</b>. Toque nos <b>cards coloridos</b> para virá-los e ver os detalhes. Marque <b>"Já estudei"</b> em cada ficha para encher a barra!
   </div>
 
-  <div class="card" data-id="cnidarios">
-    <h3>🪼 Cnidários (águas-vivas, corais, anêmonas)</h3>
-    <ul>
-      <li>Têm <b>cnidócitos</b>: células urticantes que <b>queimam</b> para capturar e se defender.</li>
-      <li>Duas formas: <b>pólipo</b> (fixo) e <b>medusa</b> (nada livre).</li>
-      <li>Alguns fazem <b>alternância de gerações</b> (trocam de forma na vida).</li>
-    </ul>
-    <div class="grid" style="margin-top:12px;">
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🌸</div><div class="nm">Pólipo</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Pólipo</h4><ul><li>Forma <b>fixa</b></li><li>Ex.: anêmona, coral</li><li>Boca voltada para cima</li></ul></div>
-      </div></div>
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🪼</div><div class="nm">Medusa</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Medusa</h4><ul><li>Forma <b>livre</b>, que nada</li><li>Ex.: água-viva</li><li>Boca voltada para baixo</li></ul></div>
-      </div></div>
+  <!-- ============ VILA CONCHA — MOLUSCOS ============ -->
+  <div class="distrito d-mar">
+    <div class="dhead"><span class="ic">🐚</span><div><h2>Vila Concha</h2><div class="dsub">MOLUSCOS · Capítulo 9 · corpo mole</div></div></div>
+
+    <div class="card" data-id="mol1">
+      <h3>🐌 Quem mora aqui</h3>
+      <ul>
+        <li>Corpo <b>mole</b> — a marca do bairro. Muitos têm <b>concha</b> de <b>carbonato de cálcio</b> (feita pelo <b>manto</b>).</li>
+        <li><b>2º maior</b> grupo de animais (perde só para os artrópodes).</li>
+        <li>Corpo em 4 partes: <b>cabeça</b>, <b>pé muscular</b>, <b>massa visceral</b> e <b>manto</b>. Muitos têm <b>rádula</b> (língua com dentinhos).</li>
+      </ul>
+      <div class="postit">💛 <b>Dica de prova:</b> "corpo mole" é a resposta certa quando perguntam a característica dos moluscos. A concha é opcional!</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('mol1',this.checked)"> Já estudei</label>
     </div>
-    <label class="estudei"><input type="checkbox" onchange="marcar('cnidarios',this.checked)"> Já estudei</label>
-  </div>
 
-  <h2 class="sec">🪱 Os vermes (e as verminoses)</h2>
-
-  <div class="card" data-id="vermes">
-    <h3>🎗️ Platelmintos e 🪱 Nematoides</h3>
-    <div class="grid" style="margin-bottom:10px;">
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🎗️</div><div class="nm">Platelmintos</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Platelmintos (achatados)</h4><ul><li>Corpo <b>achatado</b> (fita)</li><li><b>Tênia</b> → teníase / cisticercose</li><li><b>Esquistossomo</b> → esquistossomose (na água, com caramujo)</li></ul></div>
-      </div></div>
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🪱</div><div class="nm">Nematoides</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Nematoides (cilíndricos)</h4><ul><li>Corpo <b>cilíndrico</b> (redondo)</li><li><b>Lombriga</b> (Ascaris) → ascaridíase</li><li><b>Ancilóstomo</b> → amarelão (fura a pele do pé)</li></ul></div>
-      </div></div>
+    <div class="card" data-id="mol2">
+      <h3>🔄 As 3 ruas (vire os cards!)</h3>
+      <div class="grid">
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fm"><div class="em">🐌</div><div class="nm">Gastrópodes</div><div class="toque">toque para virar</div></div>
+          <div class="face back fm2"><h4>Gastrópodes</h4><ul><li>Caracóis, lesmas, caramujos</li><li><b>Grupo mais numeroso</b></li><li>Mar (maioria), água doce e terra</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fm"><div class="em">🦪</div><div class="nm">Bivalves</div><div class="toque">toque para virar</div></div>
+          <div class="face back fm2"><h4>Bivalves</h4><ul><li>Ostras, mexilhões, vieiras</li><li>Todos <b>aquáticos</b>, concha em 2 partes</li><li><b>Filtradores</b> e quase parados</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fm"><div class="em">🐙</div><div class="nm">Cefalópodes</div><div class="toque">toque para virar</div></div>
+          <div class="face back fm2"><h4>Cefalópodes</h4><ul><li>Polvos, lulas, sépias</li><li>Concha reduzida/ausente</li><li><b>Circulação FECHADA</b> + tinta de fuga</li></ul></div>
+        </div></div>
+      </div>
+      <div class="peg">⚠️ <b>Pegadinha:</b> o <b>cefalópode</b> é o único molusco com sistema circulatório <b>fechado</b>. Os outros têm aberto!</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('mol2',this.checked)"> Já estudei</label>
     </div>
-    <div class="peg">⚠️ <b>Não confunda:</b> platelminto = <b>achatado</b> (fita) • nematoide = <b>cilíndrico</b> (redondo). O formato quase sempre cai na prova!</div>
-    <label class="estudei"><input type="checkbox" onchange="marcar('vermes',this.checked)"> Já estudei</label>
-  </div>
 
-  <div class="card" data-id="verminoses">
-    <h3>🧼 Prevenção das verminoses</h3>
-    <ul>
-      <li><b>Lavar</b> as mãos e os alimentos; <b>beber água tratada</b>.</li>
-      <li>Ter <b>saneamento básico</b> (esgoto tratado).</li>
-      <li><b>Andar calçado</b> (contra o amarelão); <b>cozinhar bem a carne</b> (contra a tênia).</li>
-    </ul>
-    <div class="postit">💛 <b>Dica:</b> estudar o <b>ciclo de vida</b> do verme mostra onde dá para "cortar" a transmissão.</div>
-    <label class="estudei"><input type="checkbox" onchange="marcar('verminoses',this.checked)"> Já estudei</label>
-  </div>
-
-  <h2 class="sec">🦾 Os artrópodes (o maior grupo de todos!)</h2>
-
-  <div class="card" data-id="artropodes">
-    <h3>🦾 Características gerais</h3>
-    <ul>
-      <li><b>Exoesqueleto de quitina</b>: armadura por fora que protege e evita ressecar.</li>
-      <li><b>Patas articuladas</b> (com juntas que dobram).</li>
-      <li><b>Muda / ecdise</b>: trocam o exoesqueleto para poder crescer.</li>
-      <li>É o <b>maior filo</b> do reino animal — vivem no mar e na terra.</li>
-    </ul>
-    <div class="postit">💛 <b>Macete das patas:</b> Inseto = <b>6</b> • Aracnídeo = <b>8</b> • Crustáceos e miriápodes = <b>muitas</b>.</div>
-    <label class="estudei"><input type="checkbox" onchange="marcar('artropodes',this.checked)"> Já estudei</label>
-  </div>
-
-  <div class="card" data-id="grupos">
-    <h3>🔄 Os 4 grupos (vire os cards!)</h3>
-    <div class="grid">
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🐝</div><div class="nm">Insetos</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Insetos</h4><ul><li><b>6 patas</b> (3 pares)</li><li>Corpo: cabeça, tórax, abdome</li><li>1 par de antenas; muitos com <b>asas</b></li><li>Ex.: besouro, abelha, formiga</li></ul></div>
-      </div></div>
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🕷️</div><div class="nm">Aracnídeos</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Aracnídeos</h4><ul><li><b>8 patas</b> (4 pares)</li><li><b>Sem antenas</b></li><li>Ex.: aranha, escorpião, carrapato</li></ul></div>
-      </div></div>
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🦐</div><div class="nm">Crustáceos</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Crustáceos</h4><ul><li>Maioria <b>aquática</b></li><li>Exoesqueleto com <b>calcário</b> (bem duro)</li><li><b>2 pares de antenas</b></li><li>Ex.: camarão, caranguejo, siri</li></ul></div>
-      </div></div>
-      <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
-        <div class="face front"><div class="em">🐛</div><div class="nm">Miriápodes</div><div class="toque">toque para virar</div></div>
-        <div class="face back"><h4>Miriápodes</h4><ul><li><b>Quilópode</b> (lacraia): 1 par/segmento, <b>peçonhento</b></li><li><b>Diplópode</b> (piolho-de-cobra): 2 pares/segmento, inofensivo</li></ul></div>
-      </div></div>
+    <div class="card" data-id="mol3">
+      <h3>💎 Pérolas e importância</h3>
+      <ul>
+        <li><b>Pérola:</b> quando entra um intruso na ostra, o <b>manto</b> o cobre com camadas da concha até virar joia.</li>
+        <li><b>Econômica:</b> alimentação (escargot, ostra, lula, polvo), conchas viram bijuteria, tinta vira nanquim.</li>
+        <li><b>Ecológica:</b> fazem parte das cadeias alimentares.</li>
+      </ul>
+      <label class="estudei"><input type="checkbox" onchange="marcar('mol3',this.checked)"> Já estudei</label>
     </div>
-    <label class="estudei"><input type="checkbox" onchange="marcar('grupos',this.checked)"> Já estudei</label>
+  </div>
+
+  <!-- ============ RUA DOS ANÉIS — ANELÍDEOS ============ -->
+  <div class="distrito d-solo">
+    <div class="dhead"><span class="ic">🪱</span><div><h2>Rua dos Anéis</h2><div class="dsub">ANELÍDEOS · Capítulo 9 · corpo em anéis</div></div></div>
+
+    <div class="card" data-id="ane1">
+      <h3>🪱 Quem mora aqui</h3>
+      <ul>
+        <li>Corpo <b>cilíndrico</b> dividido em anéis, os <b>metâmeros</b>.</li>
+        <li>Respiração <b>cutânea</b> (pela pele) e sangue com <b>hemoglobina</b>.</li>
+        <li>Sistema digestório <b>completo</b> (boca → ânus), com <b>papo</b> (guarda) e <b>moela</b> (tritura).</li>
+      </ul>
+      <div class="peg">⚠️ <b>Não confunda:</b> <b>minhoca</b> é anelídeo (corpo em anéis). <b>Lombriga</b> é nematoide (cap. 8). São grupos diferentes!</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('ane1',this.checked)"> Já estudei</label>
+    </div>
+
+    <div class="card" data-id="ane2">
+      <h3>🔄 Os 3 tipos (vire os cards!)</h3>
+      <div class="grid">
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fs"><div class="em">🪱</div><div class="nm">Oligoquetas</div><div class="toque">toque para virar</div></div>
+          <div class="face back fs2"><h4>Oligoquetas</h4><ul><li>Ex.: <b>minhoca</b></li><li><b>Poucas</b> cerdas + têm clitelo</li><li>Vivem no solo úmido</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fs"><div class="em">🩸</div><div class="nm">Aquetas</div><div class="toque">toque para virar</div></div>
+          <div class="face back fs2"><h4>Aquetas (hirudíneos)</h4><ul><li>Ex.: <b>sanguessuga</b></li><li><b>Sem</b> cerdas + ventosas</li><li><b>Hematófaga</b> e ectoparasita</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fs"><div class="em">🔥</div><div class="nm">Poliquetas</div><div class="toque">toque para virar</div></div>
+          <div class="face back fs2"><h4>Poliquetas</h4><ul><li>Vermes do <b>mar</b></li><li><b>Muitas</b> cerdas nos parapódios</li><li>Respiram por brânquias · dioicos</li></ul></div>
+        </div></div>
+      </div>
+      <div class="postit">💛 <b>Macete das cerdas:</b> <b>Oligo</b> = poucas · <b>Aqueta</b> = nenhuma ("a" de ausente) · <b>Poli</b> = muitas.</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('ane2',this.checked)"> Já estudei</label>
+    </div>
+
+    <div class="card" data-id="ane3">
+      <h3>🌱 A minhoca campeã (e a sanguessuga médica)</h3>
+      <ul>
+        <li>Minhoca <b>areja o solo</b> e faz <b>húmus</b> (adubo) → "solo com minhoca é solo bom".</li>
+        <li><b>Detritívora</b>, sem olhos, <b>hermafrodita</b> com <b>reprodução cruzada</b> (encosta os clitelos).</li>
+        <li>Sanguessuga: a saliva tem <b>hirudina</b>, que impede a coagulação (usada em remédios).</li>
+      </ul>
+      <label class="estudei"><input type="checkbox" onchange="marcar('ane3',this.checked)"> Já estudei</label>
+    </div>
+  </div>
+
+  <!-- ============ BAIRRO BLINDADO — ARTRÓPODES ============ -->
+  <div class="distrito d-blindado">
+    <div class="dhead"><span class="ic">🦾</span><div><h2>Bairro Blindado</h2><div class="dsub">ARTRÓPODES · Capítulo 10 · o maior de todos</div></div></div>
+
+    <div class="card" data-id="art1">
+      <h3>🦾 Características gerais</h3>
+      <ul>
+        <li><b>Maior filo</b> do reino animal (~<b>80%</b> das espécies). Nome = "pés articulados".</li>
+        <li><b>Exoesqueleto</b> de <b>proteína + quitina</b>: armadura impermeável que protege e evita ressecar.</li>
+        <li><b>Muda (ecdise):</b> troca do exoesqueleto para crescer. A roupa largada = <b>exúvia</b>.</li>
+        <li><b>Patas articuladas</b> aos pares · simetria bilateral · antenas, olhos e bocas especializadas.</li>
+      </ul>
+      <div class="postit">💛 <b>Dica:</b> se a pergunta fala em "armadura por fora que não cresce junto", a resposta envolve <b>exoesqueleto</b> e <b>muda</b>.</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('art1',this.checked)"> Já estudei</label>
+    </div>
+
+    <div class="card" data-id="art2">
+      <h3>🔄 Os 5 grupos (vire os cards!)</h3>
+      <div class="grid">
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fb"><div class="em">🐝</div><div class="nm">Insetos</div><div class="toque">toque para virar</div></div>
+          <div class="face back fb2"><h4>Insetos</h4><ul><li><b>6 patas</b> · 1 par de antenas</li><li>Corpo: cabeça, tórax, abdome</li><li>Únicos com <b>asas</b>; olhos compostos</li><li>Respiração <b>traqueal</b></li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fb"><div class="em">🕷️</div><div class="nm">Aracnídeos</div><div class="toque">toque para virar</div></div>
+          <div class="face back fb2"><h4>Aracnídeos</h4><ul><li><b>8 patas</b> · <b>SEM antenas</b></li><li>Corpo: cefalotórax + abdome</li><li>Quelíceras + pedipalpos; aranha tem fiandeira</li><li>Aranha, escorpião, ácaro, carrapato</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fb"><div class="em">🦐</div><div class="nm">Crustáceos</div><div class="toque">toque para virar</div></div>
+          <div class="face back fb2"><h4>Crustáceos</h4><ul><li><b>2 pares de antenas</b> (só eles!)</li><li>5 pares de patas ou mais</li><li>Respiração branquial · maioria aquática</li><li>Camarão, caranguejo, craca</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fb"><div class="em">🐛</div><div class="nm">Quilópodes</div><div class="toque">toque para virar</div></div>
+          <div class="face back fb2"><h4>Quilópodes</h4><ul><li>Lacraia, centopeia</li><li><b>Achatado, venenoso</b>, carnívoro</li><li><b>1 par</b> de patas por segmento</li><li>Forcípulas injetam veneno</li></ul></div>
+        </div></div>
+        <div class="flip" onclick="this.classList.toggle('virado')"><div class="flip-inner">
+          <div class="face front fb"><div class="em">🌀</div><div class="nm">Diplópodes</div><div class="toque">toque para virar</div></div>
+          <div class="face back fb2"><h4>Diplópodes</h4><ul><li>Piolho-de-cobra</li><li><b>Cilíndrico, inofensivo</b>, herbívoro</li><li><b>2 pares</b> de patas por segmento</li><li>Se enrola em espiral</li></ul></div>
+        </div></div>
+      </div>
+      <div style="font-size:.8em;color:#7a4520;margin-top:8px;">🐛 Quilópodes + Diplópodes = <b>Miriápodes</b> ("muitas pernas", 1 par de antenas).</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('art2',this.checked)"> Já estudei</label>
+    </div>
+
+    <div class="card" data-id="art3">
+      <h3>📊 Tabela salva-vidas: como diferenciar</h3>
+      <table class="tabela">
+        <tr><th>Grupo</th><th>Patas</th><th>Antenas</th><th>Corpo</th></tr>
+        <tr><td>Insetos</td><td>6 (3 pares)</td><td>1 par</td><td>cabeça+tórax+abdome</td></tr>
+        <tr><td>Aracnídeos</td><td>8 (4 pares)</td><td>nenhuma</td><td>cefalotórax+abdome</td></tr>
+        <tr><td>Crustáceos</td><td>5 pares ou +</td><td>2 pares</td><td>cefalotórax+abdome</td></tr>
+        <tr><td>Miriápodes</td><td>muitas</td><td>1 par</td><td>cabeça+tronco</td></tr>
+      </table>
+      <div class="peg">⚠️ <b>Campeões de pegadinha:</b> aranha <b>não tem antena</b> e <b>não é inseto</b>! E só o crustáceo tem <b>2 pares</b> de antenas.</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('art3',this.checked)"> Já estudei</label>
+    </div>
+
+    <div class="card" data-id="art4">
+      <h3>🦋 Desenvolvimento dos insetos + relações com a gente</h3>
+      <ul>
+        <li><b>Ametábolo:</b> sem metamorfose (traça). <b>Hemimetábolo:</b> metamorfose incompleta, passa por ninfa (percevejo). <b>Holometábolo:</b> completa, larva→pupa→adulto (borboleta).</li>
+        <li><b>Aliados:</b> polinizadores (abelha, borboleta), afofam o solo, dão mel/própolis.</li>
+        <li><b>Problemas:</b> pragas de lavoura, parasitas (piolho, pulga, carrapato) e <b>vetores</b>: <b>Aedes aegypti</b> → dengue, zika e chikungunya.</li>
+      </ul>
+      <div class="postit">💛 <b>Macete da metamorfose:</b> <b>A</b>metábolo = <b>A</b>usente · <b>Hemi</b> = metade (incompleta) · <b>Holo</b> = tudo (completa).</div>
+      <label class="estudei"><input type="checkbox" onchange="marcar('art4',this.checked)"> Já estudei</label>
+    </div>
   </div>
 
   <div class="gloss">
-    <h3>📖 Glossário</h3>
+    <h3>📖 Glossário do bairro</h3>
     <dl>
-      <dt>Filtrador</dt><dd>Animal que filtra a água para retirar o alimento (ex.: esponja).</dd>
-      <dt>Cnidócito</dt><dd>Célula urticante dos cnidários, que "queima" para capturar e defender.</dd>
-      <dt>Pólipo / Medusa</dt><dd>Formas do cnidário: pólipo é fixo; medusa nada livre.</dd>
-      <dt>Exoesqueleto</dt><dd>Esqueleto externo (armadura) de quitina, típico dos artrópodes.</dd>
-      <dt>Quitina</dt><dd>Substância que forma o exoesqueleto dos artrópodes.</dd>
-      <dt>Muda (ecdise)</dt><dd>Troca do exoesqueleto para o artrópode poder crescer.</dd>
-      <dt>Verminose</dt><dd>Doença causada por vermes parasitas (ex.: teníase, ascaridíase).</dd>
-      <dt>Peçonhento</dt><dd>Animal que injeta veneno (ex.: lacraia, escorpião).</dd>
+      <dt>Manto</dt><dd>Dobra de pele do molusco que produz a concha (e a pérola).</dd>
+      <dt>Rádula</dt><dd>"Língua" com dentinhos do molusco, usada para raspar o alimento.</dd>
+      <dt>Metâmero</dt><dd>Cada anel/segmento do corpo dos anelídeos.</dd>
+      <dt>Clitelo</dt><dd>Região mais grossa da minhoca, importante na reprodução (forma o casulo).</dd>
+      <dt>Hirudina</dt><dd>Substância da saliva da sanguessuga que impede o sangue de coagular.</dd>
+      <dt>Exoesqueleto</dt><dd>Esqueleto externo (armadura) de proteína e quitina dos artrópodes.</dd>
+      <dt>Ecdise (muda)</dt><dd>Troca do exoesqueleto para o artrópode crescer.</dd>
+      <dt>Forcípula</dt><dd>Garra de veneno do quilópode (lacraia).</dd>
+      <dt>Vetor</dt><dd>Animal que transporta o agente causador de uma doença (ex.: Aedes aegypti).</dd>
     </dl>
   </div>
 
-  <div class="rodape">Resumo • Kit 🌊 Expedição Mar &amp; Terra</div>
+  <div class="rodape">Resumo • Kit 🗺️ Bairros dos Invertebrados</div>
 </div>
 
 <script>
-const CARDS=['poriferos','cnidarios','vermes','verminoses','artropodes','grupos'];
-const KEY='resumo_ciencias_cap9_10_v1';
+const CARDS=['mol1','mol2','mol3','ane1','ane2','ane3','art1','art2','art3','art4'];
+const KEY='resumo_ciencias_cap9_10_bairros_v1';
 let estado={estudados:{},lastSaved:null};
 function carregar(){try{const s=localStorage.getItem(KEY);if(s)estado=Object.assign(estado,JSON.parse(s));}catch(e){}}
 function salvar(){estado.lastSaved=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(estado));mostrarSalvo();}
@@ -199,7 +284,7 @@ function aplicar(){
   document.getElementById('pnum').textContent=feitos+'/'+CARDS.length;
   document.getElementById('barraFill').style.width=(feitos/CARDS.length*100)+'%';
 }
-function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso_resumo_ciencias.json';a.click();}
+function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso_resumo_ciencias_bairros.json';a.click();}
 function importar(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{estado=Object.assign({estudados:{}},JSON.parse(e.target.result));salvar();aplicar();alert('Progresso importado! ✅');}catch(err){alert('Arquivo inválido. 😕');}};r.readAsText(f);}
 function zerar(){if(!confirm('Isso apaga as marcações para outra criança usar. Tem certeza?'))return;estado={estudados:{},lastSaved:null};localStorage.removeItem(KEY);salvar();aplicar();}
 carregar();aplicar();mostrarSalvo();
