@@ -3,119 +3,189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌊 Expedição Mar & Terra — Kit de Estudos Ciências 7º ano</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>🗺️ Bairros dos Invertebrados — Kit de Estudos Ciências 7º ano</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
-  :root{--mar-fundo:#0b3d5c;--mar:#0e7c6b;--mar-claro:#13a58e;--coral:#ef6a4b;--coral-d:#d64d30;--azul:#12325e;--areia:#f5ecd9;--areia2:#ece0c6;--texto:#22323d;--amarelo:#ffe08a;--vermelho:#d64430;--terra:#b6702f;}
-  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:18px;
-    background:radial-gradient(circle at 10% 6%,rgba(19,165,142,.16),transparent 40%),radial-gradient(circle at 90% 12%,rgba(239,106,75,.14),transparent 42%),linear-gradient(170deg,#f7efdd,#f1e6cd 60%,#f5ecd9);background-attachment:fixed;min-height:100vh;}
-  .wrap{max-width:840px;margin:0 auto;}
-  h1,h2,h3{font-family:'Baloo 2',cursive;}
-  .capa{background:linear-gradient(135deg,var(--mar-fundo),var(--mar) 65%,var(--mar-claro));color:#fff;border-radius:24px;padding:34px 26px;text-align:center;position:relative;overflow:hidden;box-shadow:0 14px 36px rgba(11,61,92,.4);margin-bottom:22px;border:3px solid #0a2f47;}
-  .capa::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:30px;background:radial-gradient(circle at 12px -6px,transparent 12px,var(--areia) 13px) repeat-x;background-size:24px 30px;}
-  .badge{display:inline-block;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:800;letter-spacing:1.5px;font-size:.74em;padding:6px 16px;border-radius:20px;margin-bottom:12px;}
-  .capa h1{font-size:2.2em;text-shadow:0 2px 12px rgba(0,0,0,.4);}
-  .capa .sub{color:#eafff8;font-size:1.1em;margin-top:6px;}
-  .capa .narr{color:#dff6ef;font-style:italic;margin-top:14px;border-top:1px dashed rgba(255,255,255,.4);padding-top:12px;font-size:.96em;}
-  .intro{background:#fffdf7;border:2px solid var(--mar);border-radius:16px;padding:20px 24px;margin-bottom:18px;box-shadow:0 6px 20px rgba(11,61,92,.1);}
-  .intro h2{color:var(--mar-fundo);font-size:1.3em;margin-bottom:10px;}
-  .intro p{margin-bottom:8px;}.intro b{color:var(--coral-d);}
-  .aviso{background:#fdf1d8;border:1.5px dashed #e0a020;border-radius:10px;padding:14px 18px;margin-bottom:20px;color:#6b4e00;font-size:.93em;}
-  .materiais{display:grid;gap:16px;margin-bottom:22px;}
-  .cardm{background:#fffdf7;border:2.5px solid;border-radius:18px;padding:20px 22px;text-decoration:none;color:var(--texto);display:block;transition:.25s;box-shadow:0 6px 20px rgba(11,61,92,.1);}
-  .cardm:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(11,61,92,.22);}
-  .c1{border-color:var(--mar);}.c1 .tt{color:var(--mar);}
-  .c2{border-color:var(--coral);}.c2 .tt{color:var(--coral-d);}
-  .c3{border-color:var(--terra);}.c3 .tt{color:var(--terra);}
-  .c4{border-color:var(--azul);}.c4 .tt{color:var(--azul);}
-  .cab{display:flex;align-items:center;gap:14px;margin-bottom:8px;flex-wrap:wrap;}
-  .ic{font-size:2.2em;}.tt{font-family:'Baloo 2';font-size:1.3em;flex:1;min-width:180px;}
-  .etq{background:var(--amarelo);color:#7a5600;padding:4px 12px;border-radius:14px;font-size:.76em;font-weight:800;border:1px solid #f0cf6a;}
-  .desc{color:#4f5a5a;font-size:.96em;margin-bottom:10px;}
-  .info{display:flex;gap:10px;flex-wrap:wrap;font-size:.82em;color:#8a8195;}
-  .info span{background:var(--areia);padding:4px 12px;border-radius:12px;border:1px solid var(--areia2);}
-  .acessar{margin-top:12px;font-weight:800;text-align:right;color:var(--mar-fundo);}
-  .acessar::after{content:" →";}
-  .crono{background:#fffdf7;border:2px solid var(--mar-claro);border-radius:16px;padding:20px 24px;margin-bottom:20px;box-shadow:0 6px 20px rgba(11,61,92,.1);}
-  .crono h2{color:var(--mar);font-size:1.3em;margin-bottom:14px;border-bottom:2px solid var(--areia2);padding-bottom:6px;}
-  .dia{background:var(--areia);border-radius:12px;padding:14px 18px;margin-bottom:12px;border-left:5px solid var(--mar-claro);}
-  .dia b.t{color:var(--coral-d);display:block;font-family:'Baloo 2';font-size:1.05em;margin-bottom:4px;}
-  .mae{background:#fdeaec;border:2px solid var(--coral);border-radius:16px;padding:20px 24px;margin-bottom:20px;box-shadow:0 6px 20px rgba(11,61,92,.1);}
-  .mae h2{color:var(--coral-d);font-size:1.25em;margin-bottom:12px;border-bottom:2px solid #f3c2cb;padding-bottom:6px;}
-  .mae p{margin-bottom:8px;font-size:.95em;color:#5a3a42;}
-  .cod{display:inline-block;background:#fff;border:1px solid var(--coral);border-radius:6px;padding:2px 10px;font-family:'Courier New',monospace;color:var(--coral-d);font-weight:800;letter-spacing:2px;}
-  .rodape{text-align:center;color:#7a6a4c;font-style:italic;padding:16px;border-top:1px dashed var(--mar-claro);margin-top:10px;}
-  @media(max-width:560px){.capa h1{font-size:1.6em;}.tt{font-size:1.1em;}}
+  body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,#12233a 0%,#1c3a4a 50%,#3a2418 100%);color:#eaf0fa;min-height:100vh;padding:20px;line-height:1.5;}
+  .container{max-width:900px;margin:0 auto;}
+  .capa{background:linear-gradient(135deg,#0f5f7d 0%,#2e6ba3 45%,#e0632c 100%);border:3px solid #f2b07d;border-radius:20px;padding:40px 30px;text-align:center;box-shadow:0 0 40px rgba(224,99,44,.35);margin-bottom:25px;position:relative;overflow:hidden;}
+  .capa::before{content:"🗺️";position:absolute;font-size:220px;opacity:.08;right:-30px;top:-40px;transform:rotate(15deg);}
+  .capa .badge-mat{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:.8em;font-weight:800;letter-spacing:2px;padding:5px 16px;border-radius:20px;position:relative;margin-bottom:14px;}
+  .capa h1{font-size:2.4em;color:#fff;text-shadow:0 0 15px rgba(242,176,125,.7),0 2px 6px rgba(0,0,0,.3);position:relative;margin-bottom:10px;}
+  .capa .sub{color:#eef3fb;font-size:1.15em;position:relative;margin-bottom:15px;}
+  .capa .narr{color:#fff3db;font-size:1em;font-style:italic;position:relative;border-top:1px dashed rgba(255,255,255,.5);padding-top:12px;margin-top:12px;}
+  .intro{background:rgba(20,40,55,.7);border:2px solid #2e6ba3;border-radius:12px;padding:20px 25px;margin-bottom:25px;backdrop-filter:blur(10px);}
+  .intro h2{color:#9dd4f5;font-size:1.3em;margin-bottom:10px;}
+  .intro p{margin-bottom:8px;}
+  .intro b{color:#f2b07d;}
+  .aviso{background:rgba(224,99,44,.15);border:1.5px dashed #f2b07d;border-radius:10px;padding:14px 18px;margin-bottom:25px;color:#fdeccb;font-size:.95em;}
+  .aviso b{color:#f2b07d;}
+  .materiais{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:30px;}
+  .card-material{background:rgba(20,40,55,.7);border:2.5px solid;border-radius:15px;padding:22px 25px;text-decoration:none;color:#eaf0fa;display:block;transition:all .3s;position:relative;overflow:hidden;backdrop-filter:blur(10px);}
+  .card-material:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(46,107,163,.5);}
+  .card-material::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transition:left .6s;}
+  .card-material:hover::before{left:100%;}
+  .card-1{border-color:#1f9d55;} .card-1 .card-titulo{color:#7bdca0;} .card-1:hover{border-color:#c8f3d8;}
+  .card-2{border-color:#8b5fd6;} .card-2 .card-titulo{color:#c9a8ec;} .card-2:hover{border-color:#e6d5f7;}
+  .card-3{border-color:#e0632c;} .card-3 .card-titulo{color:#f2b07d;} .card-3:hover{border-color:#ffe7b8;}
+  .card-4{border-color:#c0392b;} .card-4 .card-titulo{color:#f0928a;} .card-4:hover{border-color:#fbd5d0;}
+  .card-cabecalho{display:flex;align-items:center;gap:15px;margin-bottom:12px;flex-wrap:wrap;}
+  .card-icone{font-size:2.5em;flex-shrink:0;}
+  .card-titulo{font-size:1.4em;font-weight:900;margin:0;flex:1;min-width:200px;}
+  .card-etiqueta{background:rgba(242,176,125,.2);color:#f2b07d;padding:4px 12px;border-radius:15px;font-size:.8em;border:1px solid #f2b07d;font-weight:700;flex-shrink:0;}
+  .card-descricao{color:#c6d8ea;font-size:1em;margin-bottom:12px;line-height:1.5;}
+  .card-info{display:flex;gap:15px;flex-wrap:wrap;font-size:.9em;color:#9db8cf;}
+  .card-info span{background:rgba(0,0,0,.3);padding:4px 12px;border-radius:12px;border:1px solid rgba(46,107,163,.4);}
+  .card-acessar{margin-top:15px;color:#fff;font-weight:700;text-align:right;font-size:1em;}
+  .card-acessar::after{content:" →";margin-left:4px;transition:margin .3s;}
+  .card-material:hover .card-acessar::after{margin-left:12px;}
+  .cronograma{background:rgba(20,40,55,.7);border:2px solid #2e6ba3;border-radius:15px;padding:22px 25px;margin-bottom:25px;backdrop-filter:blur(10px);}
+  .cronograma h2{color:#9dd4f5;font-size:1.4em;margin-bottom:15px;border-bottom:1px solid #2e6ba3;padding-bottom:8px;}
+  .dia{background:rgba(0,0,0,.3);border-radius:10px;padding:14px 18px;margin-bottom:12px;border-left:4px solid #e0632c;}
+  .dia-titulo{color:#f2b07d;font-weight:900;font-size:1.1em;margin-bottom:6px;}
+  .dia-conteudo{color:#eaf0fa;font-size:.95em;}
+  .dia-conteudo b{color:#f2b07d;}
+  .dica-mae{background:rgba(192,57,43,.12);border:2px solid #f0928a;border-radius:15px;padding:20px 25px;margin-bottom:25px;backdrop-filter:blur(10px);}
+  .dica-mae h2{color:#f0928a;font-size:1.3em;margin-bottom:12px;border-bottom:1px solid #c0392b;padding-bottom:8px;}
+  .dica-mae p{color:#fbe0dc;margin-bottom:10px;font-size:.95em;}
+  .dica-mae b{color:#f2b07d;}
+  .dica-mae .codigo{display:inline-block;background:rgba(0,0,0,.4);border:1px solid #f0928a;border-radius:6px;padding:2px 10px;font-family:'Courier New',monospace;color:#f2b07d;font-weight:700;letter-spacing:2px;}
+  .rodape{text-align:center;color:#9dd4f5;font-style:italic;padding:20px;border-top:1px dashed #2e6ba3;margin-top:20px;}
+  @media(max-width:600px){.capa h1{font-size:1.6em;}.card-titulo{font-size:1.15em;}.card-icone{font-size:2em;}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
 
   <div class="capa">
-    <div class="badge">CIÊNCIAS · 7º ANO · COLÉGIO CORAÇÃO FELIZ</div>
-    <h1>🌊 Expedição Mar &amp; Terra</h1>
-    <div class="sub">Kit de Estudos — Avaliação Mensal 1 (Capítulos 9 e 10)</div>
-    <div class="narr">Bem-vindo(a) à expedição, jovem aprendiz! Vamos mergulhar do fundo do mar (esponjas e águas-vivas) até a terra firme (vermes, insetos e aranhas). Siga a ordem dos 4 materiais e chegue firme no dia da prova! ⛵🏝️</div>
+    <div class="badge-mat">CIÊNCIAS · 7º ANO · MENSAL</div>
+    <h1>🗺️ Bairros dos Invertebrados</h1>
+    <div class="sub">Kit de Estudos — Moluscos, Anelídeos e Artrópodes</div>
+    <div class="narr">Bem-vindo(a), jovem aprendiz! Nesta cidade, cada grupo de invertebrado mora em um bairro: a 🐚 Vila Concha (moluscos), a 🪱 Rua dos Anéis (anelídeos) e o 🦾 Bairro Blindado (artrópodes). Passeie pelos 4 materiais e aprenda a reconhecer quem é quem — sem cair em nenhuma pegadinha! 🔍</div>
   </div>
 
   <div class="intro">
-    <h2>🔎 O que cai na prova</h2>
-    <p>📗 <b>Capítulo 9 — Invertebrados:</b> poríferos (esponjas), cnidários (águas-vivas, corais) e vermes (platelmintos e nematoides), com as verminoses e sua prevenção.</p>
-    <p>📙 <b>Capítulo 10 — Artrópodes:</b> características gerais (exoesqueleto, muda) e os grupos: insetos, aracnídeos, crustáceos e miriápodes. <i>(Equinodermos não entram nesta prova.)</i></p>
-    <p>São <b>4 materiais</b> que se completam. Faça na ordem: 1️⃣ Leitura Guiada, 2️⃣ Quiz, 3️⃣ Resumo, 4️⃣ Simulado.</p>
+    <h2>📜 O que cai na prova</h2>
+    <p>A prova cobre <b>dois capítulos</b> do livro Callis Ciências 7 (Livro 1):</p>
+    <p>🐚 <b>Capítulo 9 — Moluscos e Anelídeos:</b> características e classificação dos moluscos (gastrópodes, bivalves, cefalópodes), pérola e importância; os anelídeos (metâmeros, respiração cutânea), os 3 tipos (oligoquetas, aquetas/sanguessugas, poliquetas) e a importância da minhoca.</p>
+    <p>🦾 <b>Capítulo 10 — Artrópodes (só a parte de artrópodes):</b> características gerais (exoesqueleto, quitina, muda/ecdise), os 5 grupos (insetos, aracnídeos, crustáceos, quilópodes e diplópodes), desenvolvimento dos insetos e as relações com o ambiente e com o ser humano (polinizadores, pragas, parasitas e o vetor <i>Aedes aegypti</i>). <b>Não entram os equinodermos.</b></p>
+    <p>São <b>4 materiais</b> que se completam. Faça na ordem: 1️⃣ <b>Leitura Guiada</b> (entender), 2️⃣ <b>Quiz</b> (testar), 3️⃣ <b>Resumo</b> (fixar e revisar), 4️⃣ <b>Simulado</b> (treinar como na prova).</p>
   </div>
 
-  <div class="aviso">💾 <b>Sobre o salvamento:</b> o progresso fica salvo no <b>navegador que você está usando</b> (Chrome do celular ≠ Chrome do computador). Para levar o progresso de um aparelho para outro, use os botões <b>📥 Exportar</b> e <b>📤 Importar</b> dentro de cada material.</div>
+  <div class="aviso">
+    💾 <b>Sobre o salvamento:</b> o progresso fica salvo no <b>navegador específico</b> que você está usando (Chrome do celular ≠ Chrome do computador). Para levar o progresso de um aparelho para o outro, use os botões "📥 Exportar" e "📤 Importar" dentro de cada material.
+  </div>
 
   <div class="materiais">
-    <a href="ciencias_leitura_guiada.html" class="cardm c1">
-      <div class="cab"><div class="ic">📖</div><div class="tt">1. Leitura Guiada</div><div class="etq">⭐ COMECE AQUI</div></div>
-      <div class="desc">11 etapas progressivas dos invertebrados aos artrópodes, com explicação fácil e 3 perguntas por etapa. A próxima só abre depois da anterior. No fim: pegadinhas + autoavaliação.</div>
-      <div class="info"><span>⏱️ 45-60 min</span><span>🧩 11 etapas</span><span>✏️ Resposta livre</span><span>🔒 Bloqueio progressivo</span></div>
-      <div class="acessar">Começar a estudar</div>
+
+    <a href="ciencias_leitura_guiada.html" class="card-material card-1">
+      <div class="card-cabecalho">
+        <div class="card-icone">📖</div>
+        <div class="card-titulo">1. Leitura Guiada</div>
+        <div class="card-etiqueta">⭐ COMECE AQUI</div>
+      </div>
+      <div class="card-descricao">
+        12 "bairros" progressivos com explicação curta em linguagem fácil e 3 perguntas de resposta livre por bairro. O próximo só abre depois de concluir o anterior. No fim: 10 pegadinhas + resumo da autoavaliação.
+      </div>
+      <div class="card-info">
+        <span>⏱️ 45-60 min</span><span>🧩 12 blocos</span><span>✏️ Resposta livre</span><span>🔒 Bloqueio progressivo</span>
+      </div>
+      <div class="card-acessar">Começar a estudar</div>
     </a>
 
-    <a href="ciencias_quiz.html" class="cardm c2">
-      <div class="cab"><div class="ic">🎯</div><div class="tt">2. Quiz Interativo</div><div class="etq">📝 TESTE-SE</div></div>
-      <div class="desc">15 perguntas de múltipla escolha. Não dá para mudar depois de enviar. O gabarito comentado abre com o código <span class="cod">MED-XX-YY</span> (que você mostra para a mãe).</div>
-      <div class="info"><span>⏱️ 20-30 min</span><span>📝 15 questões</span><span>✅ Múltipla escolha</span><span>🔒 Código MED</span></div>
-      <div class="acessar">Fazer o quiz</div>
+    <a href="ciencias_quiz.html" class="card-material card-2">
+      <div class="card-cabecalho">
+        <div class="card-icone">❓</div>
+        <div class="card-titulo">2. Quiz Interativo</div>
+        <div class="card-etiqueta">📝 TESTE-SE</div>
+      </div>
+      <div class="card-descricao">
+        15 perguntas de múltipla escolha sobre os dois capítulos. Não dá para mudar a resposta depois de enviar. O gabarito comentado só aparece com o código <span style="font-family:monospace;color:#f2b07d">MED-XX-YY</span> (que você mostra para a mãe).
+      </div>
+      <div class="card-info">
+        <span>⏱️ 20-30 min</span><span>📝 15 questões</span><span>✅ Múltipla escolha</span><span>🔒 Código MED-XX-YY</span>
+      </div>
+      <div class="card-acessar">Fazer o quiz</div>
     </a>
 
-    <a href="ciencias_resumo.html" class="cardm c3">
-      <div class="cab"><div class="ic">📌</div><div class="tt">3. Resumo Interativo</div><div class="etq">🧠 FIXE E REVISE</div></div>
-      <div class="desc">Cards por tema, flip cards para comparar os grupos, post-its de dica, caixa de pegadinhas e glossário. Marque "já estudei" e acompanhe a barra de progresso.</div>
-      <div class="info"><span>⏱️ 20-30 min</span><span>🃏 Flip cards</span><span>💛 Dicas + pegadinhas</span><span>📖 Glossário</span></div>
-      <div class="acessar">Abrir o resumo</div>
+    <a href="ciencias_resumo.html" class="card-material card-3">
+      <div class="card-cabecalho">
+        <div class="card-icone">🗺️</div>
+        <div class="card-titulo">3. Resumo Interativo</div>
+        <div class="card-etiqueta">🧠 FIXE E REVISE</div>
+      </div>
+      <div class="card-descricao">
+        A cidade em 3 bairros, com cartões que giram (flip) para cada grupo. Tem a tabela salva-vidas "patas × antenas", post-its com macetes, caixas de pegadinha e glossário. Ótimo para revisar batendo o olho na véspera.
+      </div>
+      <div class="card-info">
+        <span>⏱️ 20-30 min</span><span>🃏 Cartões giratórios</span><span>💛 Macetes + pegadinhas</span><span>📖 Glossário</span>
+      </div>
+      <div class="card-acessar">Abrir o resumo</div>
     </a>
 
-    <a href="ciencias_simulado.html" class="cardm c4">
-      <div class="cab"><div class="ic">📝</div><div class="tt">4. Simulado Final</div><div class="etq">🏆 TREINO DA PROVA</div></div>
-      <div class="desc">25 questões inéditas misturando toda a matéria, no estilo da prova. Faça como no dia da avaliação. Gabarito comentado liberado pelo código <span class="cod">SIM-XX-YY</span>.</div>
-      <div class="info"><span>⏱️ 45-60 min</span><span>📋 25 questões</span><span>🎓 Estilo prova</span><span>🔒 Código SIM</span></div>
-      <div class="acessar">Encarar o simulado</div>
+    <a href="ciencias_simulado.html" class="card-material card-4">
+      <div class="card-cabecalho">
+        <div class="card-icone">📝</div>
+        <div class="card-titulo">4. Simulado Final</div>
+        <div class="card-etiqueta">🏆 TREINO DA PROVA</div>
+      </div>
+      <div class="card-descricao">
+        27 questões inéditas no estilo da prova: múltipla escolha, números romanos, somatório e 1 discursiva. Faça como se fosse o dia da prova. Gabarito comentado (certa em verde, erradas explicadas) liberado pelo código <span style="font-family:monospace;color:#f2b07d">SIM-XX-YY</span>.
+      </div>
+      <div class="card-info">
+        <span>⏱️ 50-70 min</span><span>📋 27 questões</span><span>🎓 Estilo prova</span><span>🔒 Código SIM-XX-YY</span>
+      </div>
+      <div class="card-acessar">Encarar o simulado</div>
     </a>
+
   </div>
 
-  <div class="crono">
+  <div class="cronograma">
     <h2>📅 Plano de estudo até a prova</h2>
-    <div class="dia"><b class="t">📅 DIA 1 — Entender (~1h)</b>Faça a <b>Leitura Guiada</b> inteira, com calma (as 11 etapas). Responda com suas palavras e marque "Acertei" ou "Preciso revisar". Anote as dúvidas.</div>
-    <div class="dia"><b class="t">📅 DIA 2 — Testar e fixar (~1h)</b>Faça o <b>Quiz</b> (15 questões) e peça à mãe para liberar o gabarito (<b>MED-XX-YY</b>). Releia o que errou. Depois passe pelo <b>Resumo</b>, virando os flip cards e lendo as pegadinhas.</div>
-    <div class="dia"><b class="t">📅 VÉSPERA — Treinar (~1h)</b>Faça o <b>Simulado</b> completo (25 questões), sem consultar, como se fosse a prova. Peça o gabarito à mãe (<b>SIM-XX-YY</b>) e entenda cada erro. Volte ao Resumo nos pontos fracos.</div>
-    <div class="dia"><b class="t">🏆 MANHÃ DA PROVA (5-10 min)</b>Só uma olhada rápida nas <b>pegadinhas</b> e nos <b>post-its</b> do Resumo. Não estude conteúdo novo! Respire fundo — você consegue! 🌊</div>
+
+    <div class="dia">
+      <div class="dia-titulo">📅 DIA 1 — Entender o conteúdo (~1h)</div>
+      <div class="dia-conteudo">
+        Faça a <b>Leitura Guiada</b> inteira, com calma (os 12 bairros). Responda com suas palavras e marque "Acertei" ou "Preciso revisar" em cada pergunta. Anote as dúvidas para conferir no Resumo.
+      </div>
+    </div>
+
+    <div class="dia">
+      <div class="dia-titulo">📅 DIA 2 — Testar e fixar (~1h)</div>
+      <div class="dia-conteudo">
+        Faça o <b>Quiz</b> (15 questões) e peça à mãe para liberar o gabarito (<b>MED-XX-YY</b>). Releia o que errou. Depois passe pelo <b>Resumo</b>, dando atenção especial aos cartões e à tabela "patas × antenas" dos temas em que você errou.
+      </div>
+    </div>
+
+    <div class="dia">
+      <div class="dia-titulo">📅 VÉSPERA — Treinar (~1h)</div>
+      <div class="dia-conteudo">
+        Faça o <b>Simulado</b> completo (27 questões), sem consultar nada, como se fosse a prova. Peça o gabarito à mãe (<b>SIM-XX-YY</b>) e entenda cada erro. Volte ao Resumo nos pontos fracos.
+      </div>
+    </div>
+
+    <div class="dia">
+      <div class="dia-titulo">🏆 MANHÃ DA PROVA (5-10 min)</div>
+      <div class="dia-conteudo">
+        Só uma olhada rápida na tabela <b>patas × antenas</b> e nas <b>pegadinhas</b> do Resumo. <b>Não estude conteúdo novo!</b> Respire fundo e confie no que estudou. Você consegue! 🗺️
+      </div>
+    </div>
   </div>
 
-  <div class="mae">
+  <div class="dica-mae">
     <h2>👩 Dica para a mãe — Códigos de liberação</h2>
-    <p>O <b>Quiz</b> e o <b>Simulado</b> têm <b>códigos de liberação</b> para o gabarito. Isso evita que a criança veja as respostas antes de tentar de verdade.</p>
-    <p>Quando ela terminar e enviar, aparece um código no topo da tela:</p>
-    <p style="margin-left:12px">🎯 Quiz: <span class="cod">MED-XX-YY</span> &nbsp;•&nbsp; 📝 Simulado: <span class="cod">SIM-XX-YY</span> &nbsp;(XX = número de acertos)</p>
-    <p>Ela <b>te mostra o código</b>, você <b>digita o mesmo código</b> no campo que aparece, e o gabarito comentado é liberado (correta em verde + cada errada explicada).</p>
-    <p style="font-style:italic;color:var(--coral-d);">💡 Antes de liberar, pergunte como ela acha que foi. Depois confiram juntas — o gabarito explica cada resposta.</p>
+    <p>O <b>Quiz</b> e o <b>Simulado</b> têm <b>códigos de liberação</b> para acessar o gabarito. Isso evita que a criança veja as respostas antes de tentar de verdade.</p>
+    <p>Quando ela terminar e enviar, aparece um código no topo da tela. Os formatos são:</p>
+    <p style="margin-left:12px">❓ Quiz: <span class="codigo">MED-XX-YY</span> (XX = número de acertos)<br>
+    📝 Simulado: <span class="codigo">SIM-XX-YY</span> (XX = número de acertos)</p>
+    <p>Ela <b>te mostra o código</b>, você <b>digita o mesmo código</b> no campo que aparece, e o gabarito comentado é liberado. As respostas dela ficam travadas — não dá para mudar depois de enviar.</p>
+    <p style="margin-top:10px;font-style:italic;color:#fbb;">💡 <b>Sugestão:</b> antes de liberar, pergunte como ela acha que foi. Depois confiram juntas — o gabarito explica a resposta certa <b>e</b> por que cada errada está errada. A questão discursiva do simulado (nº 27) tem uma <b>resposta-modelo</b> para você comparar.</p>
   </div>
 
-  <div class="rodape">Kit de Estudos 🌊 Expedição Mar &amp; Terra • Ciências 7º ano • Cap. 9 e 10</div>
+  <div class="rodape">
+    🗺️ Que cada bairro dos invertebrados fique claro na memória e que nenhuma pegadinha te pegue de surpresa. Bons estudos, jovem aprendiz! 💚🪱🦾
+  </div>
+
 </div>
 </body>
 </html>
