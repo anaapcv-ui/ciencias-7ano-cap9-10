@@ -3,384 +3,298 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌊 Expedição Mar & Terra — Leitura Guiada | Ciências 7º ano</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>📖 Leitura Guiada — Bairros dos Invertebrados | Ciências 7º ano</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
-  :root{
-    --mar-fundo:#0b3d5c; --mar:#0e7c6b; --mar-claro:#13a58e;
-    --coral:#ef6a4b; --coral-d:#d64d30;
-    --areia:#f5ecd9; --areia2:#ece0c6; --terra:#b6702f;
-    --texto:#22323d; --ok:#1f9d57; --rev:#e0892a; --vermelho:#d64430;
-  }
-  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:16px;
-    background:
-      radial-gradient(circle at 10% 6%,rgba(19,165,142,.16),transparent 40%),
-      radial-gradient(circle at 92% 10%,rgba(239,106,75,.14),transparent 42%),
-      linear-gradient(170deg,#f7efdd,#f1e6cd 60%,#f5ecd9);
-    background-attachment:fixed;min-height:100vh;}
-  .wrap{max-width:820px;margin:0 auto;}
-  h1,h2,h3,.tt{font-family:'Baloo 2',cursive;}
-
-  /* Capa */
-  .capa{background:linear-gradient(135deg,var(--mar-fundo),var(--mar) 70%,var(--mar-claro));
-    color:#fff;border-radius:22px;padding:30px 26px;text-align:center;position:relative;overflow:hidden;
-    box-shadow:0 12px 34px rgba(11,61,92,.35);margin-bottom:18px;border:3px solid #0a2f47;}
-  .capa::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:34px;
-    background:radial-gradient(circle at 12px -6px,transparent 12px,var(--areia) 13px) repeat-x;
-    background-size:24px 34px;}
-  .badge{display:inline-block;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.4);
-    color:#fff;font-weight:800;letter-spacing:1.5px;font-size:.72em;padding:5px 14px;border-radius:20px;margin-bottom:12px;}
-  .capa h1{font-size:2em;text-shadow:0 2px 10px rgba(0,0,0,.35);margin-bottom:6px;}
-  .capa .sub{font-size:1.05em;color:#eafff8;}
-  .capa .narr{font-style:italic;color:#dff6ef;margin-top:12px;border-top:1px dashed rgba(255,255,255,.4);padding-top:10px;font-size:.95em;}
-
-  /* Painel de salvamento */
-  .painel{background:#fffdf7;border:2px solid var(--mar);border-radius:14px;padding:12px 16px;margin-bottom:16px;
-    display:flex;flex-wrap:wrap;align-items:center;gap:10px;box-shadow:0 5px 18px rgba(11,61,92,.1);}
-  .painel .status{flex:1;min-width:180px;font-size:.86em;color:#4a6a63;}
-  .painel .status b{color:var(--mar);}
-  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.85em;cursor:pointer;transition:.2s;}
-  .btn:hover{transform:translateY(-2px);}
-  .btn-mar{background:var(--mar);color:#fff;} .btn-areia{background:var(--areia2);color:#5c4a2e;}
-  .btn-coral{background:var(--coral);color:#fff;} .btn-ghost{background:#eee;color:#666;}
-
-  /* Como funciona */
-  .como{background:#fffdf7;border:2px dashed var(--coral);border-radius:14px;padding:14px 18px;margin-bottom:16px;font-size:.94em;}
-  .como h2{color:var(--coral-d);font-size:1.15em;margin-bottom:6px;}
-  .como ol{margin:6px 0 0 20px;} .como li{margin-bottom:3px;}
-
-  /* Barra de progresso */
-  .progresso{position:sticky;top:8px;z-index:20;background:#fffdf7;border:2px solid var(--mar);border-radius:30px;
-    padding:8px 14px;margin-bottom:18px;box-shadow:0 5px 16px rgba(11,61,92,.15);display:flex;align-items:center;gap:10px;}
-  .barra{flex:1;height:14px;background:var(--areia2);border-radius:10px;overflow:hidden;}
-  .barra > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mar),var(--mar-claro));transition:width .5s;}
-  .progresso .pnum{font-weight:800;color:var(--mar);font-size:.9em;white-space:nowrap;}
-
-  /* Blocos */
-  .bloco{background:#fffdf7;border-radius:16px;padding:22px 22px 20px;margin-bottom:16px;
-    border:2px solid var(--areia2);box-shadow:0 6px 20px rgba(11,61,92,.09);position:relative;}
-  .bloco.aberto{border-color:var(--mar);}
+  :root{--verde:#1f8f5f;--verde-d:#14663f;--verde-claro:#43b982;--mar:#2f9fc4;--solo:#b06a34;--blindado:#e0632c;--papel:#f4fbf6;--texto:#233;--ok:#1f9d57;--rever:#e0952b;--vermelho:#d64430;--amarelo:#ffe08a;}
+  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.65;padding:14px;
+    background:linear-gradient(180deg,#eaf7f0,#e2f2ea 60%,#eaf7f0);min-height:100vh;}
+  .wrap{max-width:840px;margin:0 auto;}
+  h1,h2,h3,.tt{font-family:'Fredoka',sans-serif;}
+  .capa{background:linear-gradient(135deg,var(--verde-d),var(--verde) 75%,var(--verde-claro));color:#fff;border-radius:22px;padding:26px 22px;text-align:center;box-shadow:0 12px 30px rgba(20,102,63,.3);margin-bottom:16px;border:3px solid #0f4d30;}
+  .badge{display:inline-block;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:800;letter-spacing:1.2px;font-size:.7em;padding:5px 14px;border-radius:20px;margin-bottom:10px;}
+  .capa h1{font-size:1.8em;text-shadow:0 2px 8px rgba(0,0,0,.3);}
+  .capa .sub{color:#e7fff4;margin-top:6px;font-size:1em;}
+  .painel{background:#fff;border:2px solid var(--verde);border-radius:14px;padding:12px 16px;margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+  .painel .status{flex:1;min-width:170px;font-size:.84em;color:#3c6b55;}.painel .status b{color:var(--verde-d);}
+  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.85em;cursor:pointer;transition:.15s;}
+  .btn:hover{transform:translateY(-2px);}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+  .btn-v{background:var(--verde);color:#fff;}.btn-cin{background:#e7ece9;color:#4b5f57;}.btn-ghost{background:#eee;color:#777;}
+  .progresso{position:sticky;top:6px;z-index:20;background:#fff;border:2px solid var(--verde);border-radius:30px;padding:8px 14px;margin-bottom:18px;box-shadow:0 5px 14px rgba(20,102,63,.15);display:flex;align-items:center;gap:10px;}
+  .barra{flex:1;height:14px;background:#dcebe3;border-radius:10px;overflow:hidden;}.barra>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--verde),var(--verde-claro));transition:width .5s;}
+  .progresso .pnum{font-weight:800;color:var(--verde-d);font-size:.9em;white-space:nowrap;}
+  .bloco{background:#fff;border:2px solid #d5e7dd;border-radius:18px;padding:0;margin-bottom:16px;box-shadow:0 5px 16px rgba(20,102,63,.08);overflow:hidden;}
+  .bloco.travado{opacity:.55;}
   .bloco.feito{border-color:var(--ok);}
-  .bloco .head{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
-  .bloco .numero{background:var(--mar);color:#fff;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
-    font-family:'Baloo 2';font-weight:800;font-size:1.1em;flex-shrink:0;}
-  .bloco.feito .numero{background:var(--ok);}
-  .bloco h3{font-size:1.25em;color:var(--mar-fundo);}
-  .bloco .texto{background:#f3ead7;border-radius:10px;padding:14px 16px;margin:10px 0 14px;font-size:1.02em;}
-  .bloco .texto b{color:var(--coral-d);}
-  .pergunta{margin-bottom:14px;}
-  .pergunta label{display:block;font-weight:700;margin-bottom:5px;color:#37515c;}
-  .pergunta label .qn{color:var(--coral);font-weight:800;}
-  textarea{width:100%;border:2px solid var(--areia2);border-radius:10px;padding:10px;font-family:'Nunito';font-size:1em;
-    resize:vertical;min-height:64px;background:#fff;}
-  textarea:focus{outline:none;border-color:var(--mar-claro);}
-  textarea:read-only{background:#f6f2e8;color:#555;}
-  .modelo{display:none;margin-top:8px;background:#e9f7f1;border-left:4px solid var(--ok);border-radius:8px;padding:9px 12px;font-size:.94em;}
-  .modelo b{color:var(--ok);}
-  .bloco.feito .modelo{display:block;}
-  .conferir{margin-top:6px;}
-  .autoaval{display:none;margin-top:14px;background:#f3ead7;border-radius:10px;padding:12px 14px;}
-  .bloco.feito .autoaval{display:block;}
-  .autoaval p{font-weight:700;margin-bottom:8px;color:#5c4a2e;}
-  .autoaval .opt{border:2px solid var(--areia2);background:#fff;border-radius:10px;padding:8px 14px;margin-right:8px;cursor:pointer;font-weight:800;font-size:.9em;}
-  .autoaval .opt.sel-ok{background:var(--ok);color:#fff;border-color:var(--ok);}
-  .autoaval .opt.sel-rev{background:var(--rev);color:#fff;border-color:var(--rev);}
-
-  /* Bloco trancado */
-  .bloco.trancado{filter:grayscale(.4);opacity:.75;}
-  .bloco.trancado .cadeado{text-align:center;padding:16px;color:#8a7d63;font-weight:700;}
-  .bloco.trancado .cadeado .big{font-size:2em;display:block;}
-  .bloco.trancado .conteudo{display:none;}
-
-  /* Final */
-  .peg{background:#fdece8;border:2px solid var(--vermelho);border-radius:16px;padding:20px 22px;margin-bottom:16px;display:none;}
-  .peg.show{display:block;}
-  .peg h2{color:var(--vermelho);font-size:1.3em;margin-bottom:10px;}
-  .peg ul{margin-left:6px;list-style:none;}
-  .peg li{margin-bottom:8px;padding-left:26px;position:relative;}
-  .peg li::before{content:"⚠️";position:absolute;left:0;}
-  .resumo{background:linear-gradient(135deg,var(--mar),var(--mar-claro));color:#fff;border-radius:16px;padding:20px 22px;margin-bottom:24px;display:none;text-align:center;}
-  .resumo.show{display:block;}
-  .resumo h2{margin-bottom:10px;} .resumo .conta{font-size:1.05em;}
-  .resumo .rev-list{background:rgba(0,0,0,.18);border-radius:10px;padding:10px;margin-top:12px;font-size:.92em;text-align:left;}
-  .rodape{text-align:center;color:#7a6a4c;font-style:italic;padding:14px;font-size:.9em;}
-  @media(max-width:560px){.capa h1{font-size:1.5em;}.bloco h3{font-size:1.08em;}}
+  .bh{padding:14px 20px;color:#fff;display:flex;align-items:center;gap:10px;}
+  .bh .n{background:rgba(255,255,255,.25);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-size:1.1em;flex-shrink:0;}
+  .bh .tit{font-family:'Fredoka';font-size:1.12em;line-height:1.2;}
+  .bh .distrito{font-size:.72em;opacity:.9;font-weight:700;letter-spacing:.5px;}
+  .bh.mar{background:linear-gradient(120deg,#1c7fa0,var(--mar));}
+  .bh.solo{background:linear-gradient(120deg,#8a5024,var(--solo));}
+  .bh.blindado{background:linear-gradient(120deg,#c04a1a,var(--blindado));}
+  .bbody{padding:16px 20px;}
+  .bbody p{margin-bottom:10px;}
+  .bbody .lead{background:var(--papel);border-left:4px solid var(--verde-claro);border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:14px;}
+  .cadeado{padding:26px 20px;text-align:center;color:#7a8c84;font-weight:700;}
+  .q{margin:14px 0;}
+  .q label{display:block;font-weight:700;color:var(--verde-d);margin-bottom:6px;}
+  .q textarea{width:100%;min-height:60px;border:2px solid #cfe0d7;border-radius:10px;padding:9px 11px;font-family:'Nunito';font-size:.95em;resize:vertical;}
+  .q textarea:focus{outline:none;border-color:var(--verde);}
+  .modelo{display:none;margin-top:8px;background:#eef8f1;border:1px solid #bfe4cd;border-radius:10px;padding:10px 12px;font-size:.92em;}
+  .modelo b{color:var(--verde-d);}
+  .autoav{display:none;margin-top:12px;padding:12px;background:#fafdfb;border:1px dashed #bcd6c7;border-radius:10px;}
+  .autoav p{font-weight:700;margin-bottom:8px;color:#3c6b55;}
+  .av-btn{border:2px solid;border-radius:20px;padding:6px 14px;font-weight:800;font-size:.85em;cursor:pointer;background:#fff;margin-right:8px;}
+  .av-ok{border-color:var(--ok);color:var(--ok);}.av-ok.sel{background:var(--ok);color:#fff;}
+  .av-rev{border-color:var(--rever);color:var(--rever);}.av-rev.sel{background:var(--rever);color:#fff;}
+  .peg{background:#fdece8;border:2px solid var(--vermelho);border-radius:16px;padding:16px 20px;margin:18px 0;}
+  .peg h3{color:var(--vermelho);margin-bottom:10px;}
+  .peg ol{margin-left:20px;}.peg li{margin-bottom:7px;}
+  .resumoav{background:#fff;border:2px solid var(--verde);border-radius:16px;padding:16px 20px;margin-bottom:16px;}
+  .resumoav h3{color:var(--verde-d);margin-bottom:8px;}
+  .rodape{text-align:center;color:#6f8579;font-style:italic;padding:14px;font-size:.88em;}
+  .final{display:none;}
+  @media(max-width:560px){.capa h1{font-size:1.4em;}.bh .tit{font-size:1em;}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <div class="capa">
-    <div class="badge">CIÊNCIAS · 7º ANO · COLÉGIO CORAÇÃO FELIZ</div>
-    <h1>🌊 Expedição Mar &amp; Terra</h1>
-    <div class="sub">Leitura Guiada — Invertebrados (Cap. 9 e 10: Artrópodes)</div>
-    <div class="narr">Prepare o diário de bordo, jovem aprendiz! Vamos mergulhar do fundo do mar (esponjas e águas-vivas) até a terra firme (vermes, insetos e aranhas), desvendando cada grupo de invertebrados. Uma etapa abre a próxima — bons ventos! ⛵</div>
+    <div class="badge">CIÊNCIAS · 7º ANO · LEITURA GUIADA</div>
+    <h1>📖 Bairros dos Invertebrados</h1>
+    <div class="sub">Cap. 9 — Moluscos e Anelídeos · Cap. 10 — Artrópodes</div>
   </div>
 
   <div class="painel">
-    <div class="status">💾 Progresso salvo automaticamente neste navegador.<br><b id="lastSaved">Nada salvo ainda.</b></div>
-    <button class="btn btn-mar" onclick="exportar()">📥 Exportar</button>
-    <button class="btn btn-areia" onclick="document.getElementById('imp').click()">📤 Importar</button>
+    <div class="status">💾 Seu progresso fica salvo neste navegador.<br><b id="lastSaved">Nada salvo ainda.</b></div>
+    <button class="btn btn-v" onclick="exportar()">📥 Exportar</button>
+    <button class="btn btn-cin" onclick="document.getElementById('imp').click()">📤 Importar</button>
     <input type="file" id="imp" accept="application/json" style="display:none" onchange="importar(event)">
     <button class="btn btn-ghost" onclick="zerar()">🗑️ Zerar</button>
   </div>
 
-  <div class="como">
-    <h2>🧭 Como funciona</h2>
-    <ol>
-      <li>Leia a explicação de cada <b>etapa</b> (bloco) com calma.</li>
-      <li>Responda as 3 perguntas <b>com suas palavras</b> (não precisa copiar do livro).</li>
-      <li>Clique em <b>"Conferir"</b> — só ativa quando as 3 estiverem respondidas.</li>
-      <li>Veja a <b>resposta modelo</b>, marque como você foi, e a <b>próxima etapa abre</b>.</li>
-    </ol>
-  </div>
+  <div class="progresso"><span class="pnum" id="pnum">0/12</span><div class="barra"><i id="barraFill"></i></div><span style="font-size:.8em;color:#5c7568;">bairros visitados</span></div>
 
-  <div class="progresso">
-    <span class="pnum" id="pnum">0/0</span>
-    <div class="barra"><i id="barraFill"></i></div>
+  <div style="background:#fff;border:2px dashed var(--verde-claro);border-radius:14px;padding:12px 16px;margin-bottom:16px;font-size:.9em;color:#3c6b55;">
+    🗺️ <b>Como funciona:</b> a cidade tem 12 bairros. Leia o texto de cada bairro, responda as 3 perguntas com <b>suas palavras</b> e clique em <b>Conferir</b>. Aí aparece a resposta-modelo e você marca se acertou. O próximo bairro só abre depois desse!
   </div>
 
   <div id="blocos"></div>
 
-  <div class="peg" id="pegadinhas">
-    <h2>⚠️ Pegadinhas da prova — leia antes de fechar!</h2>
-    <ul id="pegLista"></ul>
+  <div class="final" id="final">
+    <div class="peg">
+      <h3>⚠️ 10 Pegadinhas da Prova</h3>
+      <ol>
+        <li><b>Molusco tem corpo mole</b> — a concha é opcional (lula e polvo quase não têm). Não confunda "concha" com "esqueleto por dentro".</li>
+        <li><b>Cefalópode</b> (polvo, lula) é o único molusco com <b>sistema circulatório FECHADO</b> — os outros têm aberto.</li>
+        <li><b>Anelídeo tem corpo em anéis (metâmeros)</b>. Minhoca NÃO é a mesma coisa que lombriga! Lombriga é <b>nematoide</b> (cap. 8), minhoca é <b>anelídeo</b>.</li>
+        <li><b>Minhoca respira pela pele</b> (cutânea) e por isso precisa de <b>umidade</b> — no sol ela resseca e morre.</li>
+        <li><b>Exoesqueleto</b> é esqueleto POR FORA (quitina). <b>Endoesqueleto</b> (por dentro) é dos equinodermos — que NÃO caem nesta prova.</li>
+        <li><b>Muda (ecdise)</b> serve para o artrópode <b>crescer</b>, porque o exoesqueleto não cresce junto. A "roupa velha" largada chama-se <b>exúvia</b>.</li>
+        <li><b>Contagem de patas:</b> inseto = 6 (3 pares) · aracnídeo = 8 (4 pares) · crustáceo = 5 pares ou mais · miriápode = muitas.</li>
+        <li><b>Antenas:</b> inseto e miriápode = 1 par · crustáceo = 2 pares · <b>aracnídeo = NENHUMA</b>. Aranha não tem antena!</li>
+        <li><b>Quilópode</b> (lacraia): achatado, 1 par de patas por anel, <b>venenoso</b>. <b>Diplópode</b> (piolho-de-cobra): cilíndrico, 2 pares por anel, inofensivo.</li>
+        <li><b>Aedes aegypti</b> transmite <b>dengue, zika e chikungunya</b> — o mosquito é o VETOR, não a doença.</li>
+      </ol>
+    </div>
+    <div class="resumoav">
+      <h3>🎯 Sua autoavaliação</h3>
+      <p id="resumoTxt">Você ainda vai preencher isso conforme avança.</p>
+    </div>
   </div>
 
-  <div class="resumo" id="resumo">
-    <h2>🏁 Fim da expedição!</h2>
-    <div class="conta" id="resumoConta"></div>
-    <div class="rev-list" id="resumoRev"></div>
-  </div>
-
-  <div class="rodape">Leitura Guiada • Kit de Estudos 🌊 Expedição Mar &amp; Terra</div>
+  <div class="rodape">Leitura Guiada • Kit 🗺️ Bairros dos Invertebrados</div>
 </div>
 
 <script>
-const BLOCOS = [
- {emoji:"🧭", titulo:"Diário de bordo: os invertebrados", texto:
-  "<b>Invertebrados</b> são animais que <b>não têm coluna vertebral</b> (não têm esqueleto de ossos por dentro). Eles são a <b>maioria</b> dos animais do planeta! Nesta expedição vamos conhecer 4 grupos, do mar para a terra: <b>poríferos</b> (esponjas), <b>cnidários</b> (águas-vivas), <b>vermes</b> e <b>artrópodes</b> (insetos, aranhas e parentes).",
-  perguntas:[
-   {p:"O que significa dizer que um animal é invertebrado?", modelo:"É um animal que não tem coluna vertebral (não tem esqueleto de ossos por dentro do corpo)."},
-   {p:"Cite dois ambientes que vamos explorar nesta expedição.", modelo:"O mar (ambiente aquático) e a terra firme (ambiente terrestre)."},
-   {p:"Entre todos os animais, os invertebrados são poucos ou muitos?", modelo:"São muitos — formam a maioria dos animais do planeta."}
-  ]},
- {emoji:"🧽", titulo:"Poríferos — as esponjas do mar", texto:
-  "<b>Poríferos</b> são as <b>esponjas</b>. Vivem <b>fixas</b> no fundo do mar e o corpo é cheio de <b>poros</b>: a água entra por eles e a esponja <b>filtra</b> o alimento (por isso são <b>filtradoras</b>). A sustentação vem da <b>espongina</b> (uma proteína) e das <b>espículas</b> (agulhinhas de sílica ou cálcio) que dão firmeza e defesa. Elas não têm tecidos nem órgãos, mas suas células fazem todas as funções.",
-  perguntas:[
-   {p:"Como a esponja consegue comida se ela não se move?", modelo:"Ela filtra a água que entra pelos poros e retira dela o alimento (é filtradora)."},
-   {p:"Para que servem as espículas?", modelo:"Servem para dar sustentação (firmeza) ao corpo e para defesa."},
-   {p:"Por que antigamente as esponjas eram confundidas com plantas?", modelo:"Porque ficam fixas e não mostram movimento aparente, parecendo plantas."}
-  ]},
- {emoji:"🪼", titulo:"Cnidários — águas-vivas, corais e anêmonas", texto:
-  "Os <b>cnidários</b> são as águas-vivas, corais, anêmonas e hidras. A marca deles são os <b>cnidócitos</b>: células que <b>queimam</b> (urticantes), usadas para <b>capturar presas e se defender</b>. Eles aparecem em duas formas: <b>pólipo</b> (fixo, como o coral e a anêmona) e <b>medusa</b> (que nada livre, como a água-viva). Alguns trocam de forma durante a vida — é a <b>alternância de gerações</b>.",
-  perguntas:[
-   {p:"Para que servem os cnidócitos?", modelo:"São células urticantes (que queimam) usadas para capturar presas e se defender."},
-   {p:"Qual a diferença entre pólipo e medusa?", modelo:"O pólipo fica fixo (ex.: coral, anêmona) e a medusa nada livre na água (ex.: água-viva)."},
-   {p:"Dê um exemplo de cnidário.", modelo:"Água-viva, coral, anêmona ou hidra (qualquer um vale)."}
-  ]},
- {emoji:"🎗️", titulo:"Platelmintos — os vermes achatados", texto:
-  "<b>Platelmintos</b> são vermes de corpo <b>achatado</b> (chato, tipo fita). Exemplos famosos: a <b>tênia</b> (a \"solitária\") e o <b>esquistossomo</b>. Alguns são parasitas: a tênia causa <b>teníase</b> (ao comer carne mal passada com larvas) e a <b>cisticercose</b> (ao engolir os ovos); o esquistossomo causa a <b>esquistossomose</b> (\"barriga d'água\"), pega na água onde vivem certos caramujos.",
-  perguntas:[
-   {p:"Como é o corpo dos platelmintos?", modelo:"É achatado (chato), com formato parecido com uma fita."},
-   {p:"Como uma pessoa pega teníase?", modelo:"Comendo carne (de porco ou boi) mal passada ou crua com larvas da tênia."},
-   {p:"Qual doença o esquistossomo causa e como se pega?", modelo:"Causa a esquistossomose (\"barriga d'água\"); pega na água contaminada com larvas liberadas por caramujos."}
-  ]},
- {emoji:"🪱", titulo:"Nematoides — os vermes cilíndricos", texto:
-  "<b>Nematoides</b> são vermes de corpo <b>cilíndrico</b> (redondo, como um espaguete). Exemplos: a <b>lombriga</b> (<i>Ascaris</i>), que causa a <b>ascaridíase</b> (pega engolindo ovos em água ou comida sujas), e o <b>ancilóstomo</b>, que causa a <b>ancilostomose</b> — o \"<b>amarelão</b>\" — cuja larva <b>fura a pele do pé descalço</b>.",
-  perguntas:[
-   {p:"Qual a diferença de formato entre platelmintos e nematoides?", modelo:"Platelminto é achatado (chato) e nematoide é cilíndrico (redondo)."},
-   {p:"Como se pega a lombriga (ascaridíase)?", modelo:"Engolindo ovos do verme presentes em água ou alimentos contaminados."},
-   {p:"Por que o \"amarelão\" tem esse nome e como evitar?", modelo:"Porque causa anemia, deixando a pessoa amarelada. Evita-se andando calçado e com saneamento/higiene."}
-  ]},
- {emoji:"🧼", titulo:"Guerra às verminoses (saúde)", texto:
-  "<b>Verminoses</b> são doenças causadas por vermes parasitas. Para se proteger: <b>lavar bem as mãos e os alimentos</b>, <b>beber água tratada</b>, ter <b>saneamento básico</b> (esgoto tratado), <b>não andar descalço</b> em terra que pode estar contaminada e <b>cozinhar bem a carne</b>. Conhecer o <b>ciclo de vida</b> do verme ajuda a descobrir onde \"cortar\" a transmissão.",
-  perguntas:[
-   {p:"Cite duas formas de evitar verminoses.", modelo:"Ex.: lavar as mãos e os alimentos, beber água tratada, andar calçado, cozinhar bem a carne (duas quaisquer)."},
-   {p:"Por que andar calçado ajuda a prevenir algumas verminoses?", modelo:"Porque impede que larvas (como a do amarelão) furem a pele do pé e entrem no corpo."},
-   {p:"Por que é útil conhecer o ciclo de vida do verme?", modelo:"Porque assim descobrimos em qual etapa dá para interromper a transmissão e prevenir a doença."}
-  ]},
- {emoji:"🦾", titulo:"Artrópodes — os campeões da Terra", texto:
-  "Os <b>artrópodes</b> são o <b>maior grupo de animais</b> do planeta (insetos, aranhas, camarões, lacraias...). Duas marcas registradas: o <b>exoesqueleto de quitina</b> (uma \"armadura\" por fora que protege e evita o corpo ressecar) e as <b>patas articuladas</b> (com juntas, que dobram). Como a armadura não cresce junto, eles a <b>trocam</b> de tempos em tempos — é a <b>muda</b> (ou <b>ecdise</b>).",
-  perguntas:[
-   {p:"O que é o exoesqueleto e para que serve?", modelo:"É uma armadura externa (de quitina) que protege o corpo e evita que ele resseque."},
-   {p:"Por que os artrópodes precisam fazer a muda (ecdise)?", modelo:"Porque o exoesqueleto não cresce junto com o corpo, então precisam trocá-lo para crescer."},
-   {p:"O que quer dizer \"patas articuladas\"?", modelo:"São patas com juntas (articulações) que permitem dobrar e mexer."}
-  ]},
- {emoji:"🐝", titulo:"Artrópodes: os insetos", texto:
-  "Os <b>insetos</b> têm <b>3 pares de patas</b> (6 patas), corpo dividido em <b>3 partes</b> (cabeça, tórax e abdome), <b>1 par de antenas</b> e muitos têm <b>asas</b> — são os <b>únicos invertebrados que voam</b>. Exemplos: besouro, borboleta, formiga, abelha. Muitos passam por <b>metamorfose</b> (ex.: lagarta que vira borboleta).",
-  perguntas:[
-   {p:"Quantas patas tem um inseto e em quantas partes se divide o corpo?", modelo:"6 patas (3 pares) e o corpo se divide em 3 partes: cabeça, tórax e abdome."},
-   {p:"O que os insetos têm que nenhum outro invertebrado tem?", modelo:"Asas — são os únicos invertebrados capazes de voar."},
-   {p:"Dê um exemplo de metamorfose de um inseto.", modelo:"A lagarta que se transforma em borboleta (ou o girino... não! — vale lagarta→borboleta, ovo→larva→adulto)."}
-  ]},
- {emoji:"🕷️", titulo:"Artrópodes: os aracnídeos", texto:
-  "Os <b>aracnídeos</b> têm <b>4 pares de patas</b> (8 patas), corpo em <b>2 partes</b> (cefalotórax e abdome) e <b>não têm antenas</b>. Exemplos: <b>aranhas, escorpiões, ácaros e carrapatos</b>. Muitos têm <b>quelíceras</b> (peças na boca); as aranhas fazem teia e os escorpiões têm ferrão. Contar as patas ajuda a diferenciar do inseto!",
-  perguntas:[
-   {p:"Quantas patas tem um aracnídeo? Isso ajuda a diferenciar de um inseto?", modelo:"8 patas (4 pares). Sim: o inseto tem 6 e o aracnídeo 8, então contar as patas diferencia."},
-   {p:"Cite dois exemplos de aracnídeos.", modelo:"Ex.: aranha, escorpião, carrapato ou ácaro (dois quaisquer)."},
-   {p:"Aracnídeos têm antenas?", modelo:"Não, aracnídeos não têm antenas (diferente dos insetos)."}
-  ]},
- {emoji:"🦐", titulo:"Artrópodes: os crustáceos", texto:
-  "A <b>maioria</b> dos <b>crustáceos</b> vive na <b>água</b> (mar e rios). Eles têm exoesqueleto reforçado com <b>calcário</b> (bem duro), <b>2 pares de antenas</b> e muitas patas. Exemplos: <b>camarão, caranguejo, siri e lagosta</b>. O <b>tatuzinho-de-jardim</b> é um dos poucos crustáceos que vivem na terra.",
-  perguntas:[
-   {p:"Onde vive a maioria dos crustáceos?", modelo:"Na água — no mar e nos rios (ambiente aquático)."},
-   {p:"O que deixa o exoesqueleto dos crustáceos tão duro?", modelo:"O reforço com calcário (carbonato de cálcio)."},
-   {p:"Dê dois exemplos de crustáceos.", modelo:"Ex.: camarão, caranguejo, siri, lagosta ou tatuzinho-de-jardim (dois quaisquer)."}
-  ]},
- {emoji:"🐛", titulo:"Artrópodes: os miriápodes (fim da expedição)", texto:
-  "Os <b>miriápodes</b> têm o corpo com <b>muitos anéis (segmentos)</b>, cada um com patas. São dois grupos: <b>quilópodes</b> (ex.: <b>lacraia</b>/centopeia — <b>1 par de patas por segmento</b>, são <b>peçonhentos</b> e carnívoros) e <b>diplópodes</b> (ex.: <b>piolho-de-cobra</b>/embuá — <b>2 pares de patas por segmento</b>, comem restos e se enrolam para se defender). 🏝️ Chegamos ao fim: você foi do fundo do mar até a terra firme!",
-  perguntas:[
-   {p:"Qual a diferença entre quilópodes e diplópodes (patas por segmento)?", modelo:"Quilópode tem 1 par de patas por segmento; diplópode tem 2 pares por segmento."},
-   {p:"Qual dos dois é peçonhento?", modelo:"O quilópode — a lacraia (centopeia) é peçonhenta."},
-   {p:"Dê um exemplo de diplópode.", modelo:"O piolho-de-cobra (também chamado de embuá ou gongolo)."}
-  ]}
+/* ===== CONTEÚDO DOS 12 BLOCOS ===== */
+const BLOCOS=[
+{d:"mar",dn:"🏘️ Vila Concha · Moluscos",t:"Quem são os moluscos?",
+ texto:`<p>Bem-vindo à <b>Vila Concha</b>, o bairro dos moluscos! Aqui moram caracóis, lesmas, lulas, polvos, ostras e mexilhões. É um bairro enorme: os moluscos são o <b>segundo maior grupo de animais do planeta</b>, perdendo só para os artrópodes. A maioria vive no mar, mas tem morador de água doce e de terra firme também.</p>
+ <p>O nome do bairro entrega a marca registrada do grupo: o <b>corpo mole</b>. Muitos moluscos protegem esse corpinho com uma <b>concha</b> feita de <b>carbonato de cálcio</b> (o mesmo material do giz). Mas atenção: nem todos têm concha por fora — a lula e o polvo têm uma concha bem pequena por dentro, ou nem têm.</p>
+ <p>O corpo de um molusco tem quatro partes principais: a <b>região da cabeça</b> (com olhos e tentáculos em alguns), o <b>pé muscular</b> (que serve para se locomover), a <b>massa visceral</b> (onde ficam os órgãos) e o <b>manto</b>, uma dobra de pele que cobre tudo e fabrica a concha. Muitos ainda têm uma "língua com dentinhos" chamada <b>rádula</b>, usada para raspar o alimento.</p>`,
+ qs:[
+  {q:"Por que o corpo mole é a marca registrada dos moluscos, mesmo os que têm concha?",m:"Porque o corpo do molusco é sempre mole; a concha é uma proteção que fica por fora (ou por dentro, reduzida), mas o animal em si é mole. Alguns nem têm concha, como o polvo."},
+  {q:"Do que é feita a concha dos moluscos e qual parte do corpo a produz?",m:"A concha é feita de carbonato de cálcio e é produzida pelo manto (a dobra de pele que cobre a massa visceral)."},
+  {q:"Para que serve a rádula?",m:"A rádula é uma estrutura parecida com uma língua cheia de dentinhos, usada para raspar e capturar o alimento."}
+ ]},
+{d:"mar",dn:"🏘️ Vila Concha · Moluscos",t:"As 3 ruas: gastrópodes, bivalves e cefalópodes",
+ texto:`<p>A Vila Concha se divide em três ruas principais (os cientistas estudam três dos oito grupos de moluscos):</p>
+ <p>🐌 <b>Rua dos Gastrópodes</b> — é a mais cheia de todas! Aqui moram caracóis, lesmas e caramujos. Têm espécies no mar (a maioria), na água doce e na terra. Muitos andam com a concha nas costas.</p>
+ <p>🦪 <b>Rua dos Bivalves</b> — moram ostras, mexilhões, mariscos e vieiras. Todos são <b>aquáticos</b> e têm concha dividida em <b>duas partes</b> (por isso "bi-valve"). Passam a vida quase <b>parados</b>, presos em rochas, e são <b>filtradores</b>: filtram a água para pegar comida. Por isso, se a água estiver poluída, eles ficam contaminados.</p>
+ <p>🐙 <b>Rua dos Cefalópodes</b> — moram polvos, lulas, sépias e náutilos. São os "atletas" do bairro: rápidos e espertos. Quase não têm concha, têm <b>sistema circulatório fechado</b> (diferente dos outros moluscos) e alguns soltam uma <b>tinta escura</b> na água para fugir dos predadores.</p>`,
+ qs:[
+  {q:"Por que comer ostras e mexilhões de água poluída é perigoso?",m:"Porque os bivalves são filtradores: filtram a água para se alimentar. Se a água estiver poluída, eles acumulam a sujeira e podem causar intoxicação em quem os come."},
+  {q:"Cite duas características que tornam os cefalópodes diferentes dos outros moluscos.",m:"Têm sistema circulatório fechado (os outros têm aberto) e quase não têm concha. Além disso, muitos soltam tinta para escapar de predadores."},
+  {q:"Qual é o grupo (rua) mais numeroso de moluscos?",m:"Os gastrópodes (caracóis, lesmas e caramujos)."}
+ ]},
+{d:"mar",dn:"🏘️ Vila Concha · Moluscos",t:"Pérolas e a importância dos moluscos",
+ texto:`<p>Um dos moradores mais famosos da Vila Concha é a <b>ostra</b>, e o motivo é uma joia: a <b>pérola</b>. Quando entra um corpo estranho (um grão de areia, uma bactéria) dentro da ostra, o <b>manto</b> reveste o intruso com as mesmas camadas que formam a concha. Com o tempo, isso vira uma pérola. As mais valiosas são as bem redondinhas — e essas são raras.</p>
+ <p>Os moluscos são muito importantes para nós. Na <b>alimentação</b>, viram pratos famosos: escargot (caracol), ostra, mexilhão, lula e polvo. As <b>conchas</b> viram botões, bijuterias e artesanato. Até a <b>tinta dos cefalópodes</b> já foi usada para fabricar a famosa tinta nanquim e tempera alguns pratos.</p>
+ <p>Na natureza (importância <b>ecológica</b>), eles fazem parte das cadeias alimentares: servem de comida para muitos animais e alguns ajudam a filtrar a água.</p>`,
+ qs:[
+  {q:"Explique, com suas palavras, como se forma uma pérola.",m:"Quando um corpo estranho (areia, bactéria) entra na ostra, o manto o envolve com camadas do mesmo material da concha. Essas camadas cristalizam e formam a pérola."},
+  {q:"Dê um exemplo de importância econômica e um de importância ecológica dos moluscos.",m:"Econômica: usados na alimentação (ostra, lula, polvo) ou as conchas viram bijuteria/botões. Ecológica: participam das cadeias alimentares e alguns filtram a água."},
+  {q:"Que parte do corpo da ostra produz a pérola?",m:"O manto, a mesma estrutura que produz a concha."}
+ ]},
+{d:"solo",dn:"🏘️ Rua dos Anéis · Anelídeos",t:"Quem são os anelídeos?",
+ texto:`<p>Saindo da Vila Concha, chegamos à <b>Rua dos Anéis</b>, o bairro dos anelídeos. O morador mais famoso aqui é a <b>minhoca</b>. Também moram as <b>sanguessugas</b> e os <b>poliquetas</b> (vermes marinhos).</p>
+ <p>Os anelídeos também são chamados de "vermes", mas são <b>mais complexos</b> que os platelmintos e nematoides do capítulo 8. A marca do bairro está no nome: o corpo é <b>cilíndrico e dividido em vários anéis</b>, chamados de <b>metâmeros</b>. Parece uma fila de argolinhas!</p>
+ <p>Eles respiram pela <b>pele</b> (respiração <b>cutânea</b>) e têm no sangue a <b>hemoglobina</b>, o mesmo pigmento vermelho que a gente tem. O sistema digestório é <b>completo</b> (tem boca, faringe, esôfago, intestino e ânus) e conta com duas peças especiais: o <b>papo</b>, que guarda o alimento, e a <b>moela</b>, que tritura antes de digerir.</p>`,
+ qs:[
+  {q:"De onde vem o nome 'anelídeo' e o que são os metâmeros?",m:"Vem de 'anel', porque o corpo é dividido em vários anéis. Os metâmeros são justamente esses segmentos (anéis) que formam o corpo."},
+  {q:"Como os anelídeos respiram?",m:"Pela pele (respiração cutânea): o oxigênio é absorvido pela pele e transportado pelo sangue, que tem hemoglobina."},
+  {q:"O que fazem o papo e a moela no sistema digestório dos anelídeos?",m:"O papo armazena o alimento e a moela tritura esse alimento antes de ele seguir para o intestino."}
+ ]},
+{d:"solo",dn:"🏘️ Rua dos Anéis · Anelídeos",t:"Os 3 tipos: oligoquetas, aquetas e poliquetas",
+ texto:`<p>A Rua dos Anéis tem três tipos de moradores, separados pela presença de <b>cerdas</b> (pelinhos que ajudam a andar) e de <b>clitelo</b> (uma região mais grossa do corpo, usada na reprodução):</p>
+ <p>🪱 <b>Oligoquetas</b> — a minhoca é a estrela. Têm <b>poucas cerdas</b> (quase invisíveis) e possuem clitelo. Vivem no solo úmido e escuro.</p>
+ <p>🩸 <b>Aquetas (ou hirudíneos)</b> — as <b>sanguessugas</b>. Têm o corpo levemente achatado e <b>nenhuma cerda</b>. Têm <b>ventosas</b> nas duas pontas do corpo. São <b>hematófagas</b> (se alimentam de sangue) e <b>ectoparasitas</b> (parasitas por fora, não por dentro).</p>
+ <p>🔥 <b>Poliquetas</b> — vermes que quase sempre vivem no <b>mar</b>. É o grupo com mais espécies. Têm <b>muitas cerdas</b> em "remos" laterais chamados <b>parapódios</b>, respiram por <b>brânquias</b> e são <b>dioicos</b> (macho e fêmea separados). Não têm clitelo.</p>`,
+ qs:[
+  {q:"Qual a diferença de cerdas entre oligoquetas, aquetas e poliquetas?",m:"Oligoquetas têm poucas cerdas; aquetas (sanguessugas) não têm nenhuma; poliquetas têm muitas cerdas, localizadas nos parapódios."},
+  {q:"Por que a sanguessuga é chamada de ectoparasita hematófaga?",m:"Ectoparasita porque parasita por fora do corpo do hospedeiro; hematófaga porque se alimenta do sangue dele, usando a ventosa da boca."},
+  {q:"Onde vivem a maioria dos poliquetas e como eles respiram?",m:"A maioria vive no mar (água salgada) e respira por brânquias."}
+ ]},
+{d:"solo",dn:"🏘️ Rua dos Anéis · Anelídeos",t:"A minhoca campeã do solo e a sanguessuga na medicina",
+ texto:`<p>A minhoca é a heroína da agricultura. Ao cavar túneis, ela <b>areja o solo</b> e ajuda a água a entrar. Além disso, as fezes dela formam o <b>húmus</b>, um adubo. Por isso se diz que "solo com minhoca é solo bom".</p>
+ <p>A minhoca é <b>detritívora</b> (come restos orgânicos em decomposição), tem <b>cinco pares de vasos</b> que funcionam como coraçõezinhos, <b>não tem olhos</b> (mas sente a luz por células na pele) e é <b>hermafrodita</b>: cada minhoca tem os dois sexos. Mesmo assim, ela precisa de outra para se reproduzir, encostando os <b>clitelos</b> um no outro — isso se chama <b>reprodução cruzada</b>. Os filhotes nascem já parecidos com os adultos.</p>
+ <p>E a sanguessuga? Na medicina, a saliva dela tem uma substância chamada <b>hirudina</b>, que <b>impede o sangue de coagular</b>. Por isso ela é usada para fabricar remédios que dissolvem coágulos.</p>`,
+ qs:[
+  {q:"Explique como a minhoca ajuda o solo de uma horta.",m:"Ela cava túneis que arejam o solo e facilitam a entrada de água; e suas fezes formam o húmus, um adubo natural que deixa a terra mais fértil."},
+  {q:"O que significa a minhoca ser hermafrodita e fazer reprodução cruzada?",m:"Hermafrodita = tem os dois sexos no mesmo corpo. Mesmo assim, precisa de outra minhoca: elas encostam os clitelos e trocam espermatozoides (reprodução cruzada)."},
+  {q:"Para que serve a hirudina, presente na saliva da sanguessuga?",m:"A hirudina impede o sangue de coagular; por isso é usada na indústria de remédios que dissolvem coágulos no sangue."}
+ ]},
+{d:"blindado",dn:"🏙️ Bairro Blindado · Artrópodes",t:"Os campeões do planeta: os artrópodes",
+ texto:`<p>Agora chegamos ao <b>Bairro Blindado</b>, o maior e mais movimentado de todos: o dos <b>artrópodes</b>. É o <b>maior grupo do reino animal</b> — cerca de <b>80% de todas as espécies conhecidas</b> são artrópodes! Eles vivem em todo lugar: no ar, na terra, na água, no frio, no calor.</p>
+ <p>O nome vem do grego: <b>"arthron"</b> (articulação) + <b>"podos"</b> (pés) = <b>"pés/pernas com articulações"</b>, ou seja, com juntas que dobram. É por isso que eles são tão ágeis.</p>
+ <p>O que fez esse bairro dominar o mundo? Algumas "armas secretas": corpo e pernas <b>segmentados e articulados</b> (facilitam o movimento), o <b>exoesqueleto</b> que evita a desidratação, <b>órgãos sensoriais</b> para perceber o ambiente, <b>ovos com casca</b> (que não ressecam) e <b>ciclos de vida curtos</b> (nascem muitos filhotes rapidamente).</p>`,
+ qs:[
+  {q:"O que significa a palavra 'artrópode' e por que esse nome combina com o grupo?",m:"Vem do grego arthron (articulação) + podos (pés): 'pés articulados'. Combina porque os artrópodes têm pernas com juntas que dobram, o que os deixa ágeis."},
+  {q:"Cite duas 'armas secretas' que ajudaram os artrópodes a dominar todos os ambientes.",m:"Exemplos: exoesqueleto que evita a desidratação; corpo e pernas segmentados/articulados; ovos com casca; órgãos sensoriais; ciclos de vida curtos."},
+  {q:"Aproximadamente que fração de todas as espécies conhecidas são artrópodes?",m:"Cerca de 80% de todas as espécies conhecidas são artrópodes — é o maior filo do reino animal."}
+ ]},
+{d:"blindado",dn:"🏙️ Bairro Blindado · Artrópodes",t:"A armadura (exoesqueleto) e a troca de roupa (muda)",
+ texto:`<p>O nome "Bairro Blindado" vem da principal característica do grupo: o <b>exoesqueleto</b>, uma <b>armadura por fora</b> do corpo. Ela é feita principalmente de <b>proteína</b> e de uma substância resistente chamada <b>quitina</b>. Essa armadura protege contra predadores e deixa o corpo <b>impermeável</b>, evitando a perda de água — por isso o artrópode sobrevive até em lugares secos.</p>
+ <p>Mas tem um problema: a armadura <b>não cresce</b> junto com o animal. A solução é a <b>muda</b> (ou <b>ecdise</b>): de tempos em tempos, o artrópode <b>abandona o exoesqueleto velho</b> (essa "roupa" largada chama-se <b>exúvia</b>) e fabrica um novo, maior. O novo começa mais mole e depois endurece.</p>
+ <p>Os artrópodes têm <b>simetria bilateral</b> (o corpo, dividido ao meio, tem dois lados iguais), <b>antenas</b> (tato e olfato), <b>olhos</b> e <b>aparelhos bucais</b> especializados. Na reprodução, têm sexos separados e às vezes <b>dimorfismo sexual</b> (macho e fêmea diferentes). Alguns insetos fazem <b>partenogênese</b>: um óvulo vira um novo ser sem fecundação (acontece em abelhas, vespas e formigas).</p>`,
+ qs:[
+  {q:"Do que é feito o exoesqueleto e quais são suas duas funções principais?",m:"É feito de proteína e quitina. Protege o corpo (como um escudo) e evita a desidratação, deixando o corpo impermeável."},
+  {q:"Por que os artrópodes precisam fazer a muda (ecdise)?",m:"Porque o exoesqueleto é rígido e não cresce junto com o animal. Para crescer, ele precisa trocar o exoesqueleto velho (exúvia) por um novo, maior."},
+  {q:"O que é partenogênese e em quais animais ela ocorre?",m:"É um tipo de reprodução em que um óvulo se desenvolve em um novo ser sem ser fecundado. Ocorre em algumas abelhas, vespas e formigas."}
+ ]},
+{d:"blindado",dn:"🏙️ Bairro Blindado · Insetos",t:"Os insetos: 6 patas e muitas asas",
+ texto:`<p>A parte mais lotada do Bairro Blindado é a dos <b>insetos</b> — o grupo <b>mais numeroso</b> de todos os artrópodes. O corpo deles tem três partes: <b>cabeça, tórax e abdome</b>. A marca registrada são as <b>6 patas (3 pares)</b>, todas saindo do tórax. Têm <b>1 par de antenas</b> e <b>olhos compostos</b> (feitos de várias unidades chamadas omatídios) mais alguns <b>ocelos</b> (olhos simples).</p>
+ <p>Muitos insetos têm <b>asas</b> (são os únicos artrópodes que voam!). Pela quantidade de asas eles são: <b>ápteros</b> (sem asas, como a formiga), <b>dípteros</b> (2 asas, como a mosca) ou <b>tetrápteros</b> (4 asas, como a borboleta). A boca varia: pode ser <b>lambedora, mastigadora ou picadora</b>.</p>
+ <p>Por dentro, respiram por <b>traqueias</b> (respiração traqueal), têm sistema circulatório <b>aberto</b> com <b>hemolinfa</b> (um "sangue" incolor que NÃO leva oxigênio) e eliminam excretas pelos <b>túbulos de Malpighi</b>. No crescimento, podem ser: <b>ametábolos</b> (sem metamorfose — já nascem parecidos com o adulto, ex. traça), <b>hemimetábolos</b> (metamorfose incompleta — passam por ninfa, ex. percevejo) ou <b>holometábolos</b> (metamorfose completa — larva → pupa → adulto, ex. borboleta).</p>`,
+ qs:[
+  {q:"Quantas patas e quantas antenas tem um inseto, e de qual parte do corpo saem as patas?",m:"Tem 6 patas (3 pares) e 1 par de antenas. As patas saem do tórax."},
+  {q:"Explique a diferença entre inseto ametábolo, hemimetábolo e holometábolo.",m:"Ametábolo: sem metamorfose, nasce parecido com o adulto (traça). Hemimetábolo: metamorfose incompleta, passa por fase de ninfa (percevejo). Holometábolo: metamorfose completa, larva → pupa → adulto (borboleta)."},
+  {q:"O que é a hemolinfa e por que ela é diferente do nosso sangue?",m:"É o 'sangue' incolor dos insetos, que circula em sistema aberto. É diferente do nosso porque NÃO transporta oxigênio (o oxigênio dos insetos vai pelas traqueias)."}
+ ]},
+{d:"blindado",dn:"🏙️ Bairro Blindado · Aracnídeos",t:"Os aracnídeos: 8 patas e nenhuma antena",
+ texto:`<p>Cuidado ao dizer que aranha é inseto — ela vai ficar ofendida! A aranha mora na parte dos <b>aracnídeos</b>, junto com <b>escorpiões, carrapatos e ácaros</b>. O corpo deles tem só <b>duas partes</b>: o <b>cefalotórax</b> (cabeça e tórax grudados) e o <b>abdome</b>.</p>
+ <p>A marca do grupo: <b>8 patas (4 pares)</b>, todas saindo do cefalotórax, e <b>NENHUMA antena</b> nem asa. Em vez de antenas, têm <b>quelíceras</b> (nas aranhas, injetam veneno; nos escorpiões, seguram o alimento) e <b>pedipalpos</b> (para segurar a presa). O escorpião injeta veneno pelo <b>aguilhão</b>, na ponta da cauda. Só as <b>aranhas</b> têm <b>fiandeiras</b>, que produzem os fios de seda das teias.</p>
+ <p>As aranhas fazem <b>digestão extracorpórea</b> (por fora do corpo): injetam enzimas na presa e depois sugam o "caldo" já digerido. Os <b>ácaros</b> são minúlcos (alguns causam alergia e sarna) e os <b>carrapatos</b> são <b>hematófagos</b> (chupam sangue).</p>`,
+ qs:[
+  {q:"Quais são as duas partes do corpo dos aracnídeos e quantas patas eles têm?",m:"O corpo tem cefalotórax (cabeça + tórax fundidos) e abdome. Têm 8 patas (4 pares), que saem do cefalotórax."},
+  {q:"Cite duas diferenças entre aracnídeos e insetos.",m:"Aracnídeos têm 8 patas e não têm antenas; insetos têm 6 patas e 1 par de antenas. Aracnídeos não têm asas; muitos insetos têm. Aranhas têm quelíceras/fiandeiras."},
+  {q:"O que é a digestão extracorpórea das aranhas?",m:"É a digestão feita fora do corpo: a aranha injeta enzimas na presa, que 'derretem' o alimento, e depois ela suga o líquido já digerido."}
+ ]},
+{d:"blindado",dn:"🏙️ Bairro Blindado · Crustáceos e Miriápodes",t:"Crustáceos e miriápodes",
+ texto:`<p>Faltam dois quarteirões do Bairro Blindado:</p>
+ <p>🦐 <b>Crustáceos</b> — camarões, caranguejos, siris, lagostas e cracas. A maioria vive na <b>água</b> (mas tem terrestre, como o tatuzinho-de-jardim). A marca deles são os <b>2 pares de antenas</b> (só eles têm isso!). O corpo tem <b>cefalotórax e abdome</b>, com <b>5 pares de patas ou mais</b>, às vezes viradas em <b>pinças</b> ou <b>remos</b>. Os olhos são <b>articulados</b> (giram). Respiram por <b>brânquias</b> e eliminam excretas pelas <b>glândulas verdes</b>.</p>
+ <p>🐛 <b>Miriápodes</b> — têm o corpo com <b>muitas pernas</b> (por isso "miria" = muito numeroso) e <b>1 par de antenas</b>. Dividem-se em dois: os <b>quilópodes</b> (lacraia/centopeia) são <b>achatados, venenosos e carnívoros</b>, com <b>1 par de patas por segmento</b> e as <b>forcípulas</b> (garras de veneno). Já os <b>diplópodes</b> (piolho-de-cobra) são <b>cilíndricos, lentos, inofensivos e herbívoros</b>, com <b>2 pares de patas por segmento</b> — quando ameaçados, se enrolam em espiral.</p>`,
+ qs:[
+  {q:"Qual característica das antenas diferencia os crustáceos dos outros artrópodes?",m:"Os crustáceos têm 2 pares de antenas — são os únicos artrópodes com essa quantidade (inseto e miriápode têm 1 par; aracnídeo não tem)."},
+  {q:"Compare quilópode e diplópode: patas por segmento e se são perigosos.",m:"Quilópode (lacraia): 1 par de patas por segmento, achatado, venenoso e carnívoro. Diplópode (piolho-de-cobra): 2 pares por segmento, cilíndrico, inofensivo e herbívoro."},
+  {q:"Como os crustáceos respiram e como eliminam excretas?",m:"Respiram por brânquias e eliminam excretas pelas glândulas verdes, que abrem perto das antenas."}
+ ]},
+{d:"blindado",dn:"🏙️ Bairro Blindado · Relações",t:"Artrópodes e nós: aliados, pragas e vetores",
+ texto:`<p>Para fechar o passeio, vamos ver como os artrópodes se relacionam com a natureza e com a gente. Muitos são <b>aliados</b>: fazem parte das cadeias alimentares, as formigas <b>afofam o solo</b>, e abelhas, moscas e borboletas são <b>polinizadoras</b> (levam o pólen de flor em flor, ajudando as plantas a se reproduzir). Alguns produzem coisas que consumimos: <b>mel, geleia real e própolis</b> (das abelhas).</p>
+ <p>Mas alguns causam problemas. Certos insetos viram <b>pragas</b> de lavoura (gafanhotos, lagartas) e, para combatê-los, usam-se <b>agrotóxicos</b> — que também prejudicam o ambiente. A bióloga <b>Rachel Carson</b>, no livro <i>Primavera Silenciosa</i>, denunciou os perigos do inseticida <b>DDT</b>, que contaminava água, solo e a cadeia alimentar.</p>
+ <p>Outros artrópodes são <b>parasitas</b> (piolhos, pulgas e carrapatos, que sugam sangue) ou <b>vetores</b> de doenças — carregam microrganismos que causam doenças. O exemplo mais famoso é o mosquito <b>Aedes aegypti</b>, que transmite <b>dengue, zika e chikungunya</b>.</p>`,
+ qs:[
+  {q:"O que é um inseto polinizador? Dê um exemplo.",m:"É o inseto que carrega o pólen de uma flor para outra, ajudando as plantas a se reproduzir. Exemplos: abelha, mosca e borboleta."},
+  {q:"Qual a diferença entre um artrópode parasita e um artrópode vetor?",m:"Parasita (piolho, pulga, carrapato) vive às custas do hospedeiro sugando seu sangue. Vetor (Aedes aegypti) transporta microrganismos que causam doenças, transmitindo-as ao picar."},
+  {q:"Que doenças o mosquito Aedes aegypti transmite?",m:"Dengue, zika e chikungunya."}
+ ]}
 ];
 
-const PEGADINHAS = [
- "Esponja NÃO é planta — é animal invertebrado (poríferos).",
- "Poríferos FILTRAM a água para comer; eles não caçam.",
- "Cnidócito é do CNIDÁRIO (água-viva/coral) — captura e queima presas.",
- "Pólipo fica FIXO; medusa NADA livre. Não troque os dois!",
- "Platelminto = ACHATADO (fita); nematoide = CILÍNDRICO (redondo). O formato cai na prova!",
- "Teníase (comer carne com larva) ≠ cisticercose (engolir ovos) — é a mesma tênia, doenças diferentes.",
- "O \"amarelão\" (ancilostomose) entra pela pele do pé DESCALÇO — por isso usar sapato.",
- "Inseto = 6 patas (3 pares). Aracnídeo = 8 patas (4 pares). Contar as patas resolve!",
- "Aracnídeo NÃO tem antena; inseto tem 1 par; crustáceo tem 2 pares.",
- "Exoesqueleto é de QUITINA; nos crustáceos vem reforçado com CALCÁRIO.",
- "Muda (ecdise) = trocar a \"armadura\" para crescer. Não é doença!",
- "Lacraia (quilópode) = 1 par por anel e é PEÇONHENTA; piolho-de-cobra (diplópode) = 2 pares e é inofensivo."
-];
-
-const KEY='lg_ciencias_cap9_10_v1';
-let estado={respostas:{},conferido:{},autoaval:{},lastSaved:null};
-
-function carregar(){
-  try{const s=localStorage.getItem(KEY);if(s)estado=Object.assign(estado,JSON.parse(s));}catch(e){}
-}
-function salvar(){
-  estado.lastSaved=new Date().toISOString();
-  localStorage.setItem(KEY,JSON.stringify(estado));
-  mostrarSalvo();
-}
-function mostrarSalvo(){
-  const el=document.getElementById('lastSaved');
-  if(!estado.lastSaved){el.textContent='Nada salvo ainda.';return;}
-  const d=new Date(estado.lastSaved);
-  el.textContent='Último salvamento: '+d.toLocaleDateString('pt-BR')+' às '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-}
-function desbloqueado(i){return i===0 || estado.conferido[i-1]===true;}
+/* ===== ESTADO / SALVAMENTO ===== */
+const KEY='lg_ciencias_cap9_10_bairros_v1';
+let estado={resp:{},conferido:{},autoav:{},lastSaved:null};
+function carregar(){try{const s=localStorage.getItem(KEY);if(s)estado=Object.assign(estado,JSON.parse(s));}catch(e){}}
+function salvar(){estado.lastSaved=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(estado));mostrarSalvo();}
+function mostrarSalvo(){const el=document.getElementById('lastSaved');if(!estado.lastSaved){el.textContent='Nada salvo ainda.';return;}const d=new Date(estado.lastSaved);el.textContent='Último salvamento: '+d.toLocaleDateString('pt-BR')+' às '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}
 
 function render(){
-  const cont=document.getElementById('blocos');
-  cont.innerHTML='';
+  const cont=document.getElementById('blocos');cont.innerHTML='';
   BLOCOS.forEach((b,i)=>{
-    const feito=estado.conferido[i]===true;
-    const aberto=desbloqueado(i);
-    const card=document.createElement('div');
-    card.className='bloco '+(feito?'feito':(aberto?'aberto':'trancado'));
-    if(!aberto){
-      card.innerHTML='<div class="cadeado"><span class="big">🔒</span>Etapa '+(i+1)+' — conclua a etapa anterior para abrir</div>';
-      cont.appendChild(card);return;
+    const liberado = i===0 || estado.conferido[i-1];
+    const feito = estado.conferido[i];
+    const div=document.createElement('div');
+    div.className='bloco'+(feito?' feito':'')+(!liberado?' travado':'');
+    let html='<div class="bh '+b.d+'"><div class="n">'+(feito?'✓':(i+1))+'</div><div><div class="distrito">'+b.dn+'</div><div class="tit">'+b.t+'</div></div></div>';
+    if(!liberado){
+      html+='<div class="cadeado">🔒 Termine o bairro '+i+' para abrir este.</div>';
+    }else{
+      html+='<div class="bbody"><div class="lead">'+b.texto+'</div>';
+      b.qs.forEach((qq,j)=>{
+        const val=(estado.resp[i]&&estado.resp[i][j])||'';
+        html+='<div class="q"><label>'+(j+1)+'. '+qq.q+'</label>'+
+          '<textarea data-b="'+i+'" data-q="'+j+'" '+(feito?'readonly':'')+' oninput="onType('+i+','+j+',this.value)">'+val.replace(/</g,'&lt;')+'</textarea>'+
+          '<div class="modelo" id="mod-'+i+'-'+j+'" '+(feito?'style="display:block"':'')+'><b>💡 Resposta-modelo:</b> '+qq.m+'</div></div>';
+      });
+      html+='<button class="btn btn-v" id="conf-'+i+'" onclick="conferir('+i+')" '+(feito?'disabled':'')+'>✅ Conferir respostas</button>';
+      html+='<div class="autoav" id="av-'+i+'" '+(feito?'style="display:block"':'')+'><p>E aí, como você foi neste bairro?</p>'+
+        '<button class="av-btn av-ok '+(estado.autoav[i]==='ok'?'sel':'')+'" onclick="setAv('+i+',\'ok\')">😃 Acertei tudo</button>'+
+        '<button class="av-btn av-rev '+(estado.autoav[i]==='rev'?'sel':'')+'" onclick="setAv('+i+',\'rev\')">🤔 Preciso revisar</button></div>';
+      html+='</div>';
     }
-    let html='<div class="head"><div class="numero">'+(feito?'✓':(i+1))+'</div><h3>'+b.emoji+' '+b.titulo+'</h3></div>';
-    html+='<div class="conteudo"><div class="texto">'+b.texto+'</div>';
-    b.perguntas.forEach((q,qi)=>{
-      const val=(estado.respostas[i]&&estado.respostas[i][qi])?estado.respostas[i][qi]:'';
-      html+='<div class="pergunta"><label><span class="qn">'+(qi+1)+'.</span> '+q.p+'</label>'+
-        '<textarea id="t-'+i+'-'+qi+'" '+(feito?'readonly':'')+' oninput="onInput('+i+')" placeholder="Escreva com suas palavras...">'+
-        val.replace(/</g,'&lt;')+'</textarea>'+
-        '<div class="modelo"><b>💡 Resposta modelo:</b> '+q.modelo+'</div></div>';
-    });
-    if(!feito){
-      html+='<button class="btn btn-coral conferir" id="conf-'+i+'" onclick="conferir('+i+')" disabled>🔎 Conferir respostas</button>';
-    }
-    const av=estado.autoaval[i];
-    html+='<div class="autoaval"><p>Como você foi nesta etapa?</p>'+
-      '<span class="opt '+(av==='ok'?'sel-ok':'')+'" onclick="marcar('+i+',\'ok\')">✅ Acertei tudo</span>'+
-      '<span class="opt '+(av==='rev'?'sel-rev':'')+'" onclick="marcar('+i+',\'rev\')">📌 Preciso revisar</span></div>';
-    html+='</div>';
-    card.innerHTML=html;
-    cont.appendChild(card);
+    div.innerHTML=html;
+    cont.appendChild(div);
   });
-  if(!estado.respostas) estado.respostas={};
-  BLOCOS.forEach((b,i)=>{if(desbloqueado(i)&&!estado.conferido[i])checkBtn(i);});
+  BLOCOS.forEach((b,i)=>{ if(!estado.conferido[i]) checkConf(i); });
   atualizarProgresso();
-  renderFinal();
+  mostrarFinal();
 }
-
-function onInput(i){
-  if(!estado.respostas[i])estado.respostas[i]={};
-  BLOCOS[i].perguntas.forEach((q,qi)=>{
-    const t=document.getElementById('t-'+i+'-'+qi);
-    if(t)estado.respostas[i][qi]=t.value;
-  });
-  checkBtn(i);
-  salvar();
-}
-function checkBtn(i){
-  const btn=document.getElementById('conf-'+i);
-  if(!btn)return;
-  let ok=true;
-  BLOCOS[i].perguntas.forEach((q,qi)=>{
-    const t=document.getElementById('t-'+i+'-'+qi);
-    if(!t||t.value.trim().length<3)ok=false;
-  });
+function onType(i,j,v){ if(!estado.resp[i])estado.resp[i]={}; estado.resp[i][j]=v; salvar(); checkConf(i); }
+function checkConf(i){
+  const btn=document.getElementById('conf-'+i); if(!btn)return;
+  const qs=BLOCOS[i].qs; let ok=true;
+  for(let j=0;j<qs.length;j++){ const v=(estado.resp[i]&&estado.resp[i][j])||''; if(v.trim().length<3){ok=false;break;} }
   btn.disabled=!ok;
 }
 function conferir(i){
-  onInput(i);
-  let ok=true;
-  BLOCOS[i].perguntas.forEach((q,qi)=>{const t=document.getElementById('t-'+i+'-'+qi);if(!t||t.value.trim().length<3)ok=false;});
-  if(!ok){alert('Responda as 3 perguntas (pelo menos 3 letras em cada) antes de conferir. 😉');return;}
-  estado.conferido[i]=true;
-  salvar();
-  render();
-  const prox=document.querySelectorAll('.bloco')[i+1];
-  if(prox)prox.scrollIntoView({behavior:'smooth',block:'center'});
+  BLOCOS[i].qs.forEach((qq,j)=>{ const m=document.getElementById('mod-'+i+'-'+j); if(m)m.style.display='block'; const t=document.querySelector('textarea[data-b="'+i+'"][data-q="'+j+'"]'); if(t)t.readOnly=true; });
+  document.getElementById('av-'+i).style.display='block';
+  document.getElementById('conf-'+i).disabled=true;
+  estado.conferido[i]=true; salvar(); render();
+  const prox=document.querySelectorAll('.bloco')[i+1]; if(prox) setTimeout(()=>prox.scrollIntoView({behavior:'smooth',block:'start'}),200);
 }
-function marcar(i,v){
-  estado.autoaval[i]=v;salvar();render();
-}
+function setAv(i,v){ estado.autoav[i]=v; salvar(); render(); }
 function atualizarProgresso(){
-  const total=BLOCOS.length;
-  let feitos=0;BLOCOS.forEach((b,i)=>{if(estado.conferido[i])feitos++;});
-  document.getElementById('pnum').textContent=feitos+'/'+total;
-  document.getElementById('barraFill').style.width=(feitos/total*100)+'%';
+  const feitos=BLOCOS.filter((b,i)=>estado.conferido[i]).length;
+  document.getElementById('pnum').textContent=feitos+'/'+BLOCOS.length;
+  document.getElementById('barraFill').style.width=(feitos/BLOCOS.length*100)+'%';
 }
-function renderFinal(){
+function mostrarFinal(){
   const todos=BLOCOS.every((b,i)=>estado.conferido[i]);
-  const peg=document.getElementById('pegadinhas'), res=document.getElementById('resumo');
+  document.getElementById('final').style.display=todos?'block':'none';
   if(todos){
-    const ul=document.getElementById('pegLista');
-    if(!ul.dataset.done){ul.innerHTML=PEGADINHAS.map(p=>'<li>'+p+'</li>').join('');ul.dataset.done='1';}
-    peg.classList.add('show');res.classList.add('show');
-    let ok=0,rev=0,revList=[];
-    BLOCOS.forEach((b,i)=>{if(estado.autoaval[i]==='ok')ok++;else if(estado.autoaval[i]==='rev'){rev++;revList.push(b.titulo);}});
-    document.getElementById('resumoConta').innerHTML='Você concluiu as <b>'+BLOCOS.length+' etapas</b>! 🎉<br>✅ Acertei tudo: <b>'+ok+'</b> &nbsp;•&nbsp; 📌 Preciso revisar: <b>'+rev+'</b>';
-    document.getElementById('resumoRev').innerHTML = revList.length? '<b>Revisar com atenção:</b><br>• '+revList.join('<br>• ') : '👏 Você não marcou nenhuma etapa para revisar. Mesmo assim, dê uma olhada nas pegadinhas acima!';
-  }else{peg.classList.remove('show');res.classList.remove('show');}
+    const rev=BLOCOS.filter((b,i)=>estado.autoav[i]==='rev').length;
+    const ok=BLOCOS.filter((b,i)=>estado.autoav[i]==='ok').length;
+    let txt='Você concluiu os 12 bairros! 🎉 Marcou <b>'+ok+'</b> como "acertei tudo" e <b>'+rev+'</b> como "preciso revisar". ';
+    txt+= rev>0 ? 'Volte nos bairros marcados com 🤔 antes da prova — a resposta-modelo continua lá para comparar.' : 'Mandou muito bem! Faça o Quiz para testar de novo.';
+    document.getElementById('resumoTxt').innerHTML=txt;
+  }
 }
-function exportar(){
-  const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
-  a.download='progresso_leitura_guiada_ciencias.json';a.click();
-}
-function importar(ev){
-  const f=ev.target.files[0];if(!f)return;
-  const r=new FileReader();
-  r.onload=e=>{try{estado=Object.assign({respostas:{},conferido:{},autoaval:{},lastSaved:null},JSON.parse(e.target.result));salvar();render();alert('Progresso importado! ✅');}catch(err){alert('Arquivo inválido. 😕');}};
-  r.readAsText(f);
-}
-function zerar(){
-  if(!confirm('Isso apaga todas as respostas para outra criança usar. Tem certeza?'))return;
-  estado={respostas:{},conferido:{},autoaval:{},lastSaved:null};
-  localStorage.removeItem(KEY);
-  document.getElementById('pegLista').dataset.done='';
-  salvar();render();
-}
-
+function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso_leitura_ciencias_bairros.json';a.click();}
+function importar(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{estado=Object.assign({resp:{},conferido:{},autoav:{}},JSON.parse(e.target.result));salvar();render();alert('Progresso importado! ✅');}catch(err){alert('Arquivo inválido. 😕');}};r.readAsText(f);}
+function zerar(){if(!confirm('Isso apaga todas as respostas para outra criança usar. Tem certeza?'))return;estado={resp:{},conferido:{},autoav:{},lastSaved:null};localStorage.removeItem(KEY);salvar();render();}
 carregar();render();mostrarSalvo();
 </script>
 </body>
