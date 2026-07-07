@@ -3,139 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📝 Simulado — Expedição Mar & Terra | Ciências 7º ano</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>📝 Simulado — Bairros dos Invertebrados | Ciências 7º ano</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
-  :root{--azul:#12325e;--azul-d:#0c2343;--vermelho:#d33a2c;--vermelho-d:#b02a1e;--areia:#f5ecd9;--areia2:#e6e0d2;--texto:#22303f;--ok:#1f9d57;--cinza:#8a8a8a;}
-  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:16px;
-    background:linear-gradient(170deg,#eef1f6,#e7ebf2 60%,#eef1f6);background-attachment:fixed;min-height:100vh;}
-  .wrap{max-width:800px;margin:0 auto;}
-  h1,h2,h3{font-family:'Baloo 2',cursive;}
-  .capa{background:linear-gradient(135deg,var(--azul-d),var(--azul));color:#fff;border-radius:20px;padding:26px 24px;text-align:center;box-shadow:0 12px 30px rgba(12,35,67,.4);margin-bottom:0;border:3px solid #08172e;}
-  .badge{display:inline-block;background:var(--vermelho);color:#fff;font-weight:800;letter-spacing:1.5px;font-size:.72em;padding:5px 14px;border-radius:20px;margin-bottom:10px;}
-  .capa h1{font-size:1.8em;text-shadow:0 2px 8px rgba(0,0,0,.4);}
-  .capa .sub{color:#dce6f5;margin-top:4px;}
-  .faixa{background:var(--vermelho);color:#fff;text-align:center;font-weight:800;padding:8px;border-radius:0 0 12px 12px;margin-bottom:16px;font-size:.9em;letter-spacing:.5px;}
+  :root{--azul:#123a63;--azul-d:#0b2742;--azul-claro:#2e6ba3;--vermelho:#d12f2f;--vermelho-d:#a81f1f;--papel:#f6f8fb;--texto:#25303c;--ok:#1f9d57;--erro:#9a9a9a;--amarelo:#ffe08a;}
+  body{font-family:'Nunito','Segoe UI',sans-serif;color:var(--texto);line-height:1.6;padding:14px;background:linear-gradient(180deg,#e7edf4,#dfe7f0 60%,#e7edf4);min-height:100vh;}
+  .wrap{max-width:820px;margin:0 auto;}
+  h1,h2,h3,.tt{font-family:'Fredoka',sans-serif;}
+  .capa{background:linear-gradient(135deg,var(--azul-d),var(--azul) 75%,var(--azul-claro));color:#fff;border-radius:22px;padding:24px 20px;text-align:center;box-shadow:0 12px 30px rgba(11,39,66,.35);margin-bottom:14px;border:3px solid #081d33;}
+  .badge{display:inline-block;background:var(--vermelho);color:#fff;font-weight:800;letter-spacing:1.2px;font-size:.68em;padding:5px 14px;border-radius:20px;margin-bottom:10px;}
+  .capa h1{font-size:1.7em;}
+  .capa .sub{color:#dce8f5;margin-top:6px;}
   .painel{background:#fff;border:2px solid var(--azul);border-radius:14px;padding:12px 16px;margin-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
-  .painel .status{flex:1;min-width:170px;font-size:.85em;color:#4a5566;}.painel .status b{color:var(--azul);}
-  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.85em;cursor:pointer;transition:.2s;}.btn:hover{transform:translateY(-2px);}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
-  .btn-azul{background:var(--azul);color:#fff;}.btn-verm{background:var(--vermelho);color:#fff;}.btn-areia{background:var(--areia2);color:#5c4a2e;}.btn-ghost{background:#eee;color:#666;}.btn-ok{background:var(--ok);color:#fff;}
-  .aviso{background:#fdeceb;border:1.5px dashed var(--vermelho);border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:.92em;color:#7a231b;}
-  .q{background:#fff;border:2px solid var(--areia2);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:0 4px 12px rgba(12,35,67,.07);}
-  .q .enun{font-weight:700;margin-bottom:10px;}.q .enun .num{background:var(--azul);color:#fff;border-radius:8px;padding:2px 9px;margin-right:8px;font-family:'Baloo 2';}
-  .alt{display:block;border:2px solid var(--areia2);border-radius:10px;padding:9px 12px;margin-bottom:7px;cursor:pointer;transition:.15s;background:#fff;}
-  .alt:hover{border-color:var(--azul);}.alt input{margin-right:8px;}
-  .alt.sel{border-color:var(--azul);background:#eef3fb;}
-  .alt.correta{border-color:var(--ok);background:#e9f7f1;}
-  .alt.errada-marcada{border-color:var(--cinza);background:#f0f0f0;color:#666;}
-  .alt.cinza{border-color:#ddd;background:#f6f6f6;color:#777;}
-  .expl{display:none;margin-top:8px;background:#eef3fb;border-left:4px solid var(--azul);border-radius:8px;padding:9px 12px;font-size:.9em;}
-  .expl.show{display:block;}.expl b{color:var(--azul);}
-  .enviar-box{text-align:center;margin:20px 0;}.btn-grande{font-size:1.05em;padding:14px 34px;border-radius:14px;}
-  .codebar{display:none;background:linear-gradient(135deg,var(--vermelho-d),var(--vermelho));color:#fff;border-radius:14px;padding:16px 18px;margin-bottom:16px;text-align:center;}
-  .codebar.show{display:block;}
-  .codebar .cod{font-family:'Courier New',monospace;font-size:1.6em;font-weight:800;letter-spacing:3px;background:rgba(0,0,0,.22);border-radius:10px;padding:6px 14px;display:inline-block;margin:8px 0;}
-  .codebar input{padding:9px 12px;border-radius:10px;border:none;font-size:1em;font-family:'Courier New',monospace;text-transform:uppercase;width:160px;text-align:center;}
-  .placar{display:none;background:var(--azul);color:#fff;border-radius:14px;padding:16px;text-align:center;font-size:1.15em;margin-bottom:16px;}.placar.show{display:block;}
-  .rodape{text-align:center;color:#6a7484;font-style:italic;padding:14px;font-size:.9em;}
-  @media(max-width:560px){.capa h1{font-size:1.35em;}}
+  .painel .status{flex:1;min-width:170px;font-size:.82em;color:#3d5670;}.painel .status b{color:var(--azul);}
+  .btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Nunito';font-weight:800;font-size:.84em;cursor:pointer;transition:.15s;}
+  .btn:hover{transform:translateY(-2px);}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+  .btn-a{background:var(--azul);color:#fff;}.btn-cin{background:#e4eaf1;color:#3d5670;}.btn-ghost{background:#eee;color:#777;}
+  .barra-cod{display:none;position:sticky;top:6px;z-index:30;background:#fdeaea;border:2px solid var(--vermelho);border-radius:14px;padding:12px 16px;margin-bottom:16px;text-align:center;box-shadow:0 5px 16px rgba(0,0,0,.12);}
+  .barra-cod .cod{font-family:'Fredoka';font-size:1.8em;letter-spacing:2px;color:var(--vermelho-d);}
+  .prog{position:sticky;top:6px;z-index:20;background:#fff;border:2px solid var(--vermelho);border-radius:30px;padding:8px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+  .prog .barra{flex:1;height:12px;background:#f0d5d5;border-radius:10px;overflow:hidden;}.prog .barra>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--vermelho),#e86a6a);transition:.4s;}
+  .prog span{font-weight:800;color:var(--vermelho-d);font-size:.85em;white-space:nowrap;}
+  .qcard{background:#fff;border:2px solid #d7e0ea;border-radius:16px;padding:16px 18px;margin-bottom:14px;box-shadow:0 4px 12px rgba(11,39,66,.06);}
+  .qtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px;}
+  .qn{font-family:'Fredoka';color:var(--azul);font-size:.85em;}
+  .tipo{font-size:.68em;font-weight:800;padding:3px 9px;border-radius:20px;color:#fff;letter-spacing:.5px;}
+  .t-mc{background:var(--azul-claro);}.t-rom{background:#7a4fb0;}.t-som{background:#c07a1a;}.t-disc{background:#2a8f6a;}
+  .qt{font-weight:700;margin-bottom:10px;}
+  .afirms{background:var(--papel);border-radius:10px;padding:10px 14px;margin-bottom:10px;font-size:.94em;}
+  .afirms div{margin-bottom:5px;}
+  .opt{display:block;border:2px solid #d8e0ea;border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer;transition:.12s;font-size:.94em;}
+  .opt:hover{border-color:var(--azul-claro);background:#f5f9fd;}
+  .opt input{margin-right:9px;}
+  .opt.sel{border-color:var(--azul);background:#eef4fb;}
+  .opt.correta{border-color:var(--ok);background:#eafaf0;}
+  .opt.errada-sel{border-color:var(--erro);background:#f2f2f2;}
+  .disc textarea{width:100%;min-height:80px;border:2px solid #d0dae6;border-radius:10px;padding:10px;font-family:'Nunito';font-size:.95em;resize:vertical;}
+  .disc textarea:focus{outline:none;border-color:var(--azul);}
+  .expl{display:none;margin-top:8px;padding:10px 12px;border-radius:10px;font-size:.9em;}
+  .expl.show{display:block;}
+  .expl.ok{background:#eafaf0;border:1px solid #a9e0be;}
+  .expl.no{background:#f2f2f2;border:1px solid #ccc;color:#555;}
+  .expl.modelo{background:#eef4fb;border:1px solid #b9d3ee;}
+  .enviar{width:100%;background:var(--vermelho);color:#fff;border:none;border-radius:14px;padding:15px;font-family:'Fredoka';font-size:1.15em;cursor:pointer;margin:8px 0 16px;}
+  .enviar:disabled{opacity:.45;cursor:not-allowed;}
+  .cod-box{display:none;background:#fff;border:2px dashed var(--vermelho);border-radius:14px;padding:16px;margin-bottom:16px;text-align:center;}
+  .cod-box input{font-family:'Fredoka';font-size:1.3em;text-align:center;letter-spacing:2px;border:2px solid var(--vermelho);border-radius:10px;padding:8px 12px;width:230px;text-transform:uppercase;}
+  .resultado{display:none;background:linear-gradient(135deg,var(--azul-d),var(--azul));color:#fff;border-radius:16px;padding:20px;text-align:center;margin-bottom:16px;}
+  .resultado .nota{font-family:'Fredoka';font-size:2.4em;}
+  .aviso{background:#fff8e1;border:1px solid #e6c94d;border-radius:10px;padding:10px 14px;font-size:.85em;color:#7a5800;margin-top:10px;}
+  .rodape{text-align:center;color:#5f7085;font-style:italic;padding:14px;font-size:.85em;}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="capa">
     <div class="badge">CIÊNCIAS · 7º ANO · SIMULADO</div>
-    <h1>📝 Simulado Final</h1>
-    <div class="sub">Invertebrados (Cap. 9) e Artrópodes (Cap. 10) · 25 questões</div>
+    <h1>📝 Simulado dos Bairros</h1>
+    <div class="sub">27 questões · no estilo da prova · Moluscos, Anelídeos e Artrópodes</div>
   </div>
-  <div class="faixa">🏆 TREINO DA PROVA — faça como se fosse o dia da avaliação!</div>
 
   <div class="painel">
     <div class="status">💾 Salvo neste navegador.<br><b id="lastSaved">Nada salvo ainda.</b></div>
-    <button class="btn btn-azul" onclick="exportar()">📥 Exportar</button>
-    <button class="btn btn-areia" onclick="document.getElementById('imp').click()">📤 Importar</button>
+    <button class="btn btn-a" onclick="exportar()">📥 Exportar</button>
+    <button class="btn btn-cin" onclick="document.getElementById('imp').click()">📤 Importar</button>
     <input type="file" id="imp" accept="application/json" style="display:none" onchange="importar(event)">
     <button class="btn btn-ghost" onclick="zerar()">🗑️ Zerar</button>
   </div>
 
-  <div class="aviso">📌 <b>Regras:</b> responda as <b>25</b> questões sozinho(a), sem consultar. Ao <b>Enviar</b>, as respostas <b>travam</b>. Aparece um <b>código SIM-</b> no topo — mostre à mãe, ela digita o código e libera o <b>gabarito comentado</b>.</div>
-
-  <div class="codebar" id="codebar">
-    🎉 Simulado enviado! Seu código é:
-    <div class="cod" id="codigo">SIM-00-XX</div>
-    <div><small>Mostre à mãe. Ela digita aqui para liberar o gabarito:</small></div>
-    <div style="margin-top:8px;"><input id="codeInput" placeholder="SIM-..." maxlength="9"> <button class="btn btn-ok" onclick="liberar()">Liberar gabarito</button></div>
-    <div id="codeErro" style="font-size:.85em;margin-top:6px;color:#ffe;"></div>
+  <div class="barra-cod" id="barraCod">
+    🔑 Código de liberação (mostre para a mãe): <div class="cod" id="codTopo">SIM-00-XX</div>
+    <div style="font-size:.8em;color:var(--vermelho-d);">Digite este código lá embaixo para ver o gabarito comentado.</div>
   </div>
-  <div class="placar" id="placar"></div>
 
-  <div id="quiz"></div>
-  <div class="enviar-box"><button class="btn btn-verm btn-grande" id="btnEnviar" onclick="enviar()" disabled>✅ Enviar simulado</button></div>
-  <div class="rodape">Simulado • Kit 🌊 Expedição Mar &amp; Terra</div>
+  <div class="prog"><span id="pnum">0/27</span><div class="barra"><i id="barraFill"></i></div><span>respondidas</span></div>
+
+  <div style="background:#fff;border:2px dashed var(--vermelho);border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:.85em;color:var(--vermelho-d);">
+    ✏️ Este simulado tem os mesmos tipos de questão da prova: <b>múltipla escolha</b>, <b>números romanos</b>, <b>somatório</b> e <b>1 discursiva</b>. Responda TODAS antes de enviar!
+  </div>
+
+  <div id="perguntas"></div>
+
+  <button class="enviar" id="btnEnviar" onclick="enviar()" disabled>📨 Enviar simulado</button>
+
+  <div class="resultado" id="resultado">
+    <div>Você acertou (nas objetivas)</div><div class="nota" id="notaTxt">0/26</div>
+    <div id="msgNota"></div>
+    <div style="font-size:.82em;margin-top:8px;opacity:.9;">A questão discursiva (nº 27) é corrigida pela mãe, comparando com a resposta-modelo.</div>
+  </div>
+
+  <div class="cod-box" id="codBox">
+    <p style="margin-bottom:10px;font-weight:700;color:var(--azul);">Digite o código de liberação para abrir o gabarito comentado:</p>
+    <input id="codInput" placeholder="SIM-XX-XX" maxlength="9">
+    <button class="btn" style="background:var(--vermelho);color:#fff;margin-left:8px;" onclick="liberarGab()">Abrir gabarito</button>
+    <div id="codErro" style="color:var(--vermelho);font-size:.85em;margin-top:8px;display:none;">Código incorreto. Confira as letras (sem I e sem O).</div>
+  </div>
+
+  <div class="rodape">Simulado • Kit 🗺️ Bairros dos Invertebrados</div>
 </div>
 
 <script>
-const QUESTOES=[
- {e:"Chamamos de invertebrados os animais que:",alt:["Não possuem coluna vertebral","Vivem só na água","Não têm patas","São sempre pequenos"],c:0,ex:"Invertebrado = <b>sem coluna vertebral</b> (sem esqueleto de ossos interno). Podem viver na água ou na terra, ter ou não patas, e ter vários tamanhos."},
- {e:"As esponjas (poríferos) se alimentam:",alt:["Caçando peixes","Filtrando a água pelos poros","Por fotossíntese","Sugando sangue"],c:1,ex:"São <b>filtradoras</b>: a água entra pelos poros e elas retiram o alimento."},
- {e:"Espongina e espículas dão às esponjas:",alt:["Velocidade","Sustentação e defesa","Visão","Voo"],c:1,ex:"Elas dão <b>firmeza (sustentação)</b> e <b>defesa</b> ao corpo da esponja."},
- {e:"O cnidócito é uma célula típica dos:",alt:["Poríferos","Cnidários","Insetos","Crustáceos"],c:1,ex:"O <b>cnidócito</b> (célula urticante) é a marca dos <b>cnidários</b>."},
- {e:"A forma de cnidário que fica FIXA é o:",alt:["Pólipo","Medusa","Anfioxo","Cnidócito"],c:0,ex:"<b>Pólipo</b> = fixo (anêmona, coral). Medusa = livre (água-viva)."},
- {e:"A água-viva é um exemplo de cnidário na forma:",alt:["Pólipo","Larva","Medusa","Ninfa"],c:2,ex:"A água-viva nada livre — é a forma <b>medusa</b>."},
- {e:"Alternância de gerações, nos cnidários, significa:",alt:["Trocar de cor","Alternar as formas pólipo e medusa durante a vida","Trocar o exoesqueleto","Mudar de sexo"],c:1,ex:"É quando o animal passa pelas duas formas — <b>pólipo e medusa</b> — ao longo da vida."},
- {e:"O corpo dos platelmintos é:",alt:["Cilíndrico","Achatado (tipo fita)","Coberto por concha","Com 8 patas"],c:1,ex:"Platelminto = <b>achatado</b> (chato, tipo fita), como a tênia."},
- {e:"A teníase é contraída quando a pessoa:",alt:["Anda descalça","Come carne malpassada com larvas de tênia","Respira ar contaminado","Toma água tratada"],c:1,ex:"Pega-se <b>comendo carne crua/malpassada</b> com larvas (cisticercos) da tênia."},
- {e:"A esquistossomose está ligada à presença de:",alt:["Mosquitos no quintal","Caramujos na água","Ratos no telhado","Poeira no ar"],c:1,ex:"O esquistossomo depende de <b>caramujos de água doce</b>; a contaminação é aquática."},
- {e:"Os nematoides se diferenciam por ter corpo:",alt:["Achatado","Cilíndrico (redondo)","Segmentado com patas","Com concha"],c:1,ex:"Nematoide = <b>cilíndrico</b> (redondo, tipo espaguete)."},
- {e:"A ascaridíase (lombriga) é transmitida:",alt:["Ao engolir ovos em água ou alimentos contaminados","Pela picada de aranha","Ao tocar em metal","Pelo vento"],c:0,ex:"Pega-se <b>engolindo os ovos</b> do Ascaris presentes em água/comida sujas."},
- {e:"Para evitar o 'amarelão' (ancilostomose), o mais importante é:",alt:["Usar boné","Andar calçado","Beber refrigerante","Dormir cedo"],c:1,ex:"A larva <b>fura a pele do pé descalço</b>; por isso <b>andar calçado</b> previne."},
- {e:"Qual atitude ajuda a prevenir verminoses em geral?",alt:["Comer carne crua","Lavar mãos e alimentos e beber água tratada","Andar descalço na lama","Não tomar banho"],c:1,ex:"Higiene, <b>água tratada</b> e saneamento cortam a transmissão dos vermes."},
- {e:"O exoesqueleto dos artrópodes é formado por:",alt:["Cálcio puro","Quitina","Madeira","Espongina"],c:1,ex:"O exoesqueleto é de <b>quitina</b> (nos crustáceos, reforçado com calcário)."},
- {e:"A muda (ecdise) acontece porque o exoesqueleto:",alt:["Fica velho e enferruja","Não cresce junto com o corpo","Serve para respirar","Muda de cor sozinho"],c:1,ex:"Como a 'armadura' <b>não cresce junto</b>, o animal a troca para poder crescer."},
- {e:"Um inseto tem:",alt:["8 patas e sem antenas","6 patas e corpo em 3 partes","4 patas e concha","nenhuma pata"],c:1,ex:"Inseto = <b>6 patas</b>, corpo em <b>3 partes</b> (cabeça, tórax, abdome), 1 par de antenas."},
- {e:"Entre os invertebrados, os únicos que conseguem voar são os:",alt:["Aracnídeos","Insetos","Crustáceos","Miriápodes"],c:1,ex:"Muitos <b>insetos têm asas</b> — são os únicos invertebrados que voam."},
- {e:"Aranhas e escorpiões possuem:",alt:["6 patas e antenas","8 patas e sem antenas","asas","2 patas"],c:1,ex:"Aracnídeos = <b>8 patas</b> e <b>sem antenas</b>."},
- {e:"Qual destes é um aracnídeo?",alt:["Besouro","Escorpião","Camarão","Lacraia"],c:1,ex:"<b>Escorpião</b> é aracnídeo (8 patas). Besouro é inseto, camarão é crustáceo, lacraia é miriápode."},
- {e:"A maioria dos crustáceos vive:",alt:["No ar","Na água","No deserto","Dentro do solo seco"],c:1,ex:"Crustáceos são, em sua maioria, <b>aquáticos</b> (mar e rios)."},
- {e:"Qual destes é um crustáceo?",alt:["Aranha","Caranguejo","Borboleta","Tênia"],c:1,ex:"<b>Caranguejo</b> é crustáceo. Aranha = aracnídeo; borboleta = inseto; tênia = platelminto."},
- {e:"A lacraia (quilópode) é caracterizada por:",alt:["2 pares de patas por segmento e ser inofensiva","1 par de patas por segmento e ser peçonhenta","não ter patas","viver só no mar"],c:1,ex:"<b>Quilópode</b> (lacraia): <b>1 par por segmento</b> e é <b>peçonhento</b> (carnívoro)."},
- {e:"O piolho-de-cobra (diplópode):",alt:["Tem 2 pares de patas por segmento e é inofensivo","É peçonhento e ataca","É um inseto com asas","Vive filtrando água"],c:0,ex:"<b>Diplópode</b>: <b>2 pares por segmento</b>, come restos e é <b>inofensivo</b> (se enrola para se defender)."},
- {e:"Para diferenciar rapidamente um inseto de um aracnídeo, o melhor é:",alt:["Ver a cor","Contar as patas (6 = inseto, 8 = aracnídeo)","Ver se voa","Medir o tamanho"],c:1,ex:"<b>Contar as patas</b> resolve: inseto tem 6 e aracnídeo tem 8."}
+/* tipos: mc (radio) | rom (radio, com afirmativas) | som (checkbox valores) | disc (texto, corrige a mãe) */
+const QS=[
+{tipo:"mc",q:"Perdendo apenas para os artrópodes, qual é o segundo maior grupo de animais do planeta?",o:["Moluscos","Anelídeos","Cnidários","Poríferos"],c:0,
+ e:["Correto! Os moluscos são o 2º maior filo animal.","Anelídeos são bem menos numerosos.","Cnidários (águas-vivas) são de outro grupo.","Poríferos (esponjas) também não são."]},
+{tipo:"mc",q:"A concha dos moluscos é feita de carbonato de cálcio e produzida por qual estrutura?",o:["Rádula","Pé muscular","Manto","Massa visceral"],c:2,
+ e:["A rádula raspa alimento.","O pé serve para locomoção.","Correto! O manto secreta a concha.","A massa visceral abriga os órgãos."]},
+{tipo:"mc",q:"Sobre os bivalves (ostras, mexilhões), é correto afirmar que são:",o:["Terrestres e predadores rápidos","Aquáticos, filtradores e vivem quase parados","Voadores e polinizadores","Parasitas do intestino humano"],c:1,
+ e:["Não são terrestres nem rápidos.","Correto! Aquáticos, filtram a água e vivem fixos.","Bivalves não voam.","Isso descreve vermes parasitas, não bivalves."]},
+{tipo:"rom",q:"Sobre os grupos de artrópodes, analise as afirmativas:",afirms:["I. Os insetos possuem 6 patas.","II. Os aracnídeos possuem 8 patas e nenhuma antena.","III. Os crustáceos possuem apenas 1 par de antenas."],
+ o:["Apenas I","Apenas I e II","I, II e III","Apenas II e III","Apenas III"],c:1,
+ e:["Falta a II, que também é correta.","Correto! I e II estão certas; III está errada (crustáceo tem 2 pares de antenas).","A III está errada.","A I também está correta.","I e II estão corretas."]},
+{tipo:"mc",q:"Qual grupo de moluscos apresenta sistema circulatório FECHADO?",o:["Gastrópodes","Bivalves","Cefalópodes","Todos os moluscos"],c:2,
+ e:["Gastrópodes têm circulação aberta.","Bivalves têm circulação aberta.","Correto! Só os cefalópodes (polvo, lula) têm circulação fechada.","Os demais têm circulação aberta."]},
+{tipo:"mc",q:"O corpo dos anelídeos, como a minhoca, caracteriza-se por ser:",o:["Achatado em forma de fita","Cilíndrico e segmentado em anéis (metâmeros)","Protegido por uma concha calcária","Dividido em cefalotórax e abdome"],c:1,
+ e:["Corpo achatado é dos platelmintos.","Correto! São anéis (metâmeros).","Concha é dos moluscos.","Cefalotórax é de aracnídeos e crustáceos."]},
+{tipo:"mc",q:"A minhoca respira pela pele. Por isso, ela:",o:["Precisa viver em solo úmido para não ressecar","Consegue viver dentro de água salgada","Não precisa de umidade","Voa em busca de oxigênio"],c:0,
+ e:["Correto! A respiração cutânea exige a pele úmida.","Minhoca não vive na água salgada.","Ela depende muito da umidade.","Minhoca não voa."]},
+{tipo:"som",q:"Sobre os moluscos e anelídeos, some os valores das afirmativas CORRETAS:",afirms:[
+ "01. Os moluscos têm corpo mole e muitos secretam concha de carbonato de cálcio.",
+ "02. A minhoca é um nematoide de corpo cilíndrico.",
+ "04. Os cefalópodes, como o polvo, apresentam sistema circulatório fechado.",
+ "08. Os bivalves são filtradores e vivem fixos em rochas.",
+ "16. A sanguessuga é hematófaga e ectoparasita."],
+ vals:[1,2,4,8,16],correct:[1,4,8,16],soma:29,
+ e:"Corretas: 01 (corpo mole + concha), 04 (cefalópode = circulação fechada), 08 (bivalve filtrador fixo) e 16 (sanguessuga hematófaga). Soma = 29. A 02 está errada: a minhoca é ANELÍDEO, não nematoide."},
+{tipo:"mc",q:"Qual anelídeo NÃO possui cerdas, tem ventosas e se alimenta de sangue?",o:["Minhoca (oligoqueta)","Sanguessuga (aqueta/hirudíneo)","Poliqueta marinho","Caramujo"],c:1,
+ e:["A minhoca tem poucas cerdas e é detritívora.","Correto! A sanguessuga não tem cerdas, tem ventosas e é hematófaga.","O poliqueta tem muitas cerdas.","Caramujo é molusco, não anelídeo."]},
+{tipo:"mc",q:"Os poliquetas se diferenciam dos outros anelídeos porque:",o:["Vivem no solo seco","Têm muitas cerdas nos parapódios e vivem no mar","Não têm nenhum tipo de cerda","Têm oito patas"],c:1,
+ e:["Poliquetas vivem no mar, não em solo seco.","Correto! Muitas cerdas nos parapódios, quase sempre marinhos.","Quem não tem cerdas é a sanguessuga.","Oito patas é de aracnídeos."]},
+{tipo:"rom",q:"Sobre a minhoca, analise as afirmativas:",afirms:["I. Respira pela pele e depende de umidade.","II. É hermafrodita e realiza reprodução cruzada.","III. Alimenta-se do sangue de outros animais."],
+ o:["Apenas I","Apenas III","Apenas I e II","I, II e III","Apenas II e III"],c:2,
+ e:["Falta a II, que também é correta.","A III está errada.","Correto! I e II corretas; III é falsa (a minhoca é detritívora, quem suga sangue é a sanguessuga).","A III está errada.","A I também está correta."]},
+{tipo:"mc",q:"Por que se diz que 'solo com minhoca é solo bom'?",o:["Porque a minhoca mata as pragas","Porque a minhoca areja o solo e produz húmus (adubo)","Porque a minhoca poliniza as plantas","Porque a minhoca deixa a terra mais seca"],c:1,
+ e:["A minhoca não é predadora de pragas.","Correto! Ela areja o solo e suas fezes formam o húmus.","Polinização é papel de insetos.","Ela deixa a terra mais fértil e arejada, não mais seca."]},
+{tipo:"mc",q:"A palavra 'artrópode' vem do grego e significa:",o:["Corpo mole","Pele com espinhos","Pés (pernas) articulados","Muitos anéis"],c:2,
+ e:["Corpo mole descreve os moluscos.","Pele com espinhos é 'equinodermo'.","Correto! Arthron (articulação) + podos (pés).","Muitos anéis lembra os anelídeos."]},
+{tipo:"mc",q:"O exoesqueleto dos artrópodes é formado principalmente por proteína e quitina. Sua função é:",o:["Filtrar a água do ambiente","Proteger o corpo e evitar a desidratação","Produzir pérolas","Realizar a fotossíntese"],c:1,
+ e:["Filtrar água é dos bivalves.","Correto! Serve de escudo e deixa o corpo impermeável.","Pérolas são dos moluscos.","Animais não fazem fotossíntese."]},
+{tipo:"mc",q:"A muda (ecdise) dos artrópodes acontece porque:",o:["O exoesqueleto não cresce junto com o corpo","O animal quer trocar de cor","O animal precisa se reproduzir","O animal vai hibernar"],c:0,
+ e:["Correto! Como o exoesqueleto é rígido, ele é trocado (a roupa velha = exúvia) para o animal crescer.","Não tem relação com cor.","A muda não é reprodução.","Não tem relação com hibernação."]},
+{tipo:"mc",q:"Um animal com 6 patas, 1 par de antenas e corpo dividido em cabeça, tórax e abdome é um:",o:["Aracnídeo","Inseto","Crustáceo","Diplópode"],c:1,
+ e:["Aracnídeo tem 8 patas e nenhuma antena.","Correto! Essa é a 'ficha' do inseto.","Crustáceo tem 2 pares de antenas e muitas patas.","Diplópode tem muitas patas."]},
+{tipo:"mc",q:"As aranhas e os escorpiões pertencem aos aracnídeos, que têm:",o:["6 patas e 1 par de antenas","8 patas e nenhuma antena","2 pares de antenas","Muitas patas e corpo cilíndrico"],c:1,
+ e:["6 patas e antena é do inseto.","Correto! 8 patas (4 pares) e sem antenas.","2 pares de antenas é do crustáceo.","Muitas patas é do miriápode."]},
+{tipo:"som",q:"Sobre os artrópodes, some os valores das afirmativas CORRETAS:",afirms:[
+ "01. Todos os artrópodes possuem exoesqueleto de quitina.",
+ "02. Os insetos possuem quatro pares de patas.",
+ "04. Os aracnídeos não possuem antenas.",
+ "08. Os crustáceos apresentam dois pares de antenas.",
+ "16. O quilópode (lacraia) é herbívoro e inofensivo."],
+ vals:[1,2,4,8,16],correct:[1,4,8],soma:13,
+ e:"Corretas: 01 (exoesqueleto de quitina), 04 (aracnídeo sem antenas) e 08 (crustáceo com 2 pares de antenas). Soma = 13. A 02 está errada (inseto tem 3 pares = 6 patas) e a 16 também (o quilópode é carnívoro e venenoso)."},
+{tipo:"mc",q:"Qual característica é EXCLUSIVA dos crustáceos entre os artrópodes?",o:["Ter exoesqueleto","Fazer muda para crescer","Possuir 2 pares de antenas","Ter patas articuladas"],c:2,
+ e:["Exoesqueleto todos têm.","A muda todos fazem.","Correto! Só os crustáceos têm 2 pares de antenas.","Patas articuladas é de todo o grupo."]},
+{tipo:"mc",q:"A lacraia (quilópode) e o piolho-de-cobra (diplópode) diferem porque:",o:["A lacraia tem 2 pares de patas por segmento e é inofensiva","O piolho-de-cobra é venenoso e carnívoro","A lacraia é venenosa com 1 par de patas por segmento; o piolho-de-cobra é inofensivo com 2 pares","Os dois têm apenas 6 patas"],c:2,
+ e:["A lacraia tem 1 par por segmento e é venenosa.","O piolho-de-cobra é inofensivo e herbívoro.","Correto! Quilópode: venenoso, 1 par/segmento. Diplópode: inofensivo, 2 pares/segmento.","Eles têm muitas patas, não 6."]},
+{tipo:"rom",q:"Sobre o desenvolvimento dos insetos, analise as afirmativas:",afirms:["I. O inseto ametábolo não passa por metamorfose.","II. O holometábolo passa pelas fases de larva e pupa.","III. O hemimetábolo nasce idêntico ao adulto e nunca muda."],
+ o:["Apenas I","Apenas I e II","Apenas III","I, II e III","Apenas II e III"],c:1,
+ e:["Falta a II, também correta.","Correto! I e II estão certas; III é falsa (o hemimetábolo passa por ninfa, metamorfose incompleta).","A III está errada.","A III está errada.","A I também está correta."]},
+{tipo:"mc",q:"A borboleta, que nasce como larva (lagarta), vira pupa (casulo) e depois adulto, é um exemplo de inseto:",o:["Ametábolo","Hemimetábolo","Holometábolo","Áptero"],c:2,
+ e:["Ametábolo não passa por metamorfose.","Hemimetábolo tem metamorfose incompleta (ninfa).","Correto! Holometábolo = metamorfose completa (larva → pupa → adulto).","Áptero é 'sem asas', não é fase de desenvolvimento."]},
+{tipo:"mc",q:"O mosquito Aedes aegypti é considerado um VETOR porque:",o:["Ele mesmo é a doença","Transmite microrganismos que causam dengue, zika e chikungunya","Poliniza as flores das plantas","Produz mel e geleia real"],c:1,
+ e:["O mosquito não é a doença, ele a transmite.","Correto! Vetor transporta o agente causador da doença.","Polinizadores são abelhas e borboletas.","Mel é produzido pelas abelhas."]},
+{tipo:"mc",q:"As abelhas e borboletas ajudam as plantas porque atuam como:",o:["Parasitas","Vetores de doenças","Polinizadores","Filtradores"],c:2,
+ e:["Elas não são parasitas das plantas.","Vetor transmite doença, não é o caso aqui.","Correto! Levam o pólen de flor em flor, ajudando na reprodução das plantas.","Filtradores são os bivalves."]},
+{tipo:"mc",q:"Qual estrutura das aranhas produz os fios de seda usados nas teias?",o:["As quelíceras","As fiandeiras","O aguilhão","As forcípulas"],c:1,
+ e:["As quelíceras injetam veneno.","Correto! As fiandeiras produzem a seda.","O aguilhão (cauda do escorpião) injeta veneno.","As forcípulas são garras da lacraia."]},
+{tipo:"mc",q:"A rádula, presente em muitos moluscos, serve para:",o:["Raspar e capturar o alimento","Produzir a concha","Respirar dentro d'água","Injetar veneno"],c:0,
+ e:["Correto! É a 'língua' com dentinhos que raspa a comida.","A concha é feita pelo manto.","A respiração é feita por brânquias ou pela superfície do corpo.","Molusco desse grupo não injeta veneno pela rádula."]},
+{tipo:"disc",q:"Explique por que os artrópodes precisam realizar a muda (ecdise) e diga o nome que se dá ao exoesqueleto antigo que eles abandonam.",
+ modelo:"Os artrópodes têm um exoesqueleto rígido (de quitina) que NÃO cresce junto com o corpo. Por isso, de tempos em tempos, eles trocam esse exoesqueleto por um novo e maior — esse processo se chama muda ou ecdise. O exoesqueleto velho que o animal abandona chama-se exúvia."}
 ];
-const PREFIXO='SIM';
-const KEY='simulado_ciencias_cap9_10_v1';
-let estado={resp:{},enviado:false,codigo:null,liberado:false,lastSaved:null};
+
+const KEY='simulado_ciencias_cap9_10_bairros_v1';
+const LETRAS='ABCDEFGHJKLMNPQRSTUVWXYZ';
+let estado={resp:{},enviado:false,codigo:null,gabAberto:false,lastSaved:null};
 function carregar(){try{const s=localStorage.getItem(KEY);if(s)estado=Object.assign(estado,JSON.parse(s));}catch(e){}}
 function salvar(){estado.lastSaved=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(estado));mostrarSalvo();}
 function mostrarSalvo(){const el=document.getElementById('lastSaved');if(!estado.lastSaved){el.textContent='Nada salvo ainda.';return;}const d=new Date(estado.lastSaved);el.textContent='Último salvamento: '+d.toLocaleDateString('pt-BR')+' às '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}
-function letras2(){const set='ABCDEFGHJKLMNPQRSTUVWXYZ';return set[Math.floor(Math.random()*set.length)]+set[Math.floor(Math.random()*set.length)];}
-function pad2(n){return (n<10?'0':'')+n;}
+function gerarCodigo(ac){const xx=String(ac).padStart(2,'0');const l=()=>LETRAS[Math.floor(Math.random()*LETRAS.length)];return 'SIM-'+xx+'-'+l()+l();}
+const AUTO=QS.filter(q=>q.tipo!=='disc').length;
+
+function tipoLabel(t){return t==='mc'?['MÚLTIPLA ESCOLHA','t-mc']:t==='rom'?['NÚMEROS ROMANOS','t-rom']:t==='som'?['SOMATÓRIO','t-som']:['DISCURSIVA','t-disc'];}
+function respondida(i){
+  const q=QS[i],r=estado.resp[i];
+  if(q.tipo==='disc')return typeof r==='string'&&r.trim().length>=3;
+  if(q.tipo==='som')return Array.isArray(r)&&r.length>0;
+  return typeof r==='number';
+}
+function somOk(i){const q=QS[i],r=estado.resp[i]||[];const a=[...r].sort((x,y)=>x-y).join(',');const b=[...q.correct].sort((x,y)=>x-y).join(',');return a===b;}
+function acertos(){let a=0;QS.forEach((q,i)=>{if(q.tipo==='mc'||q.tipo==='rom'){if(estado.resp[i]===q.c)a++;}else if(q.tipo==='som'){if(somOk(i))a++;}});return a;}
+
 function render(){
-  const cont=document.getElementById('quiz');cont.innerHTML='';
-  QUESTOES.forEach((q,i)=>{
-    const div=document.createElement('div');div.className='q';
-    let html='<div class="enun"><span class="num">'+(i+1)+'</span>'+q.e+'</div>';
-    q.alt.forEach((a,ai)=>{
-      const sel=estado.resp[i]===ai;let cls='alt'+(sel?' sel':'');
-      if(estado.liberado){if(ai===q.c)cls='alt correta';else if(sel)cls='alt errada-marcada';else cls='alt cinza';}
-      html+='<label class="'+cls+'"><input type="radio" name="q'+i+'" '+(sel?'checked':'')+' '+(estado.enviado?'disabled':'')+' onclick="escolher('+i+','+ai+')">'+String.fromCharCode(97+ai)+') '+a+'</label>';
-    });
-    html+='<div class="expl'+(estado.liberado?' show':'')+'"><b>💡 Explicação:</b> '+q.ex+'</div>';
+  const cont=document.getElementById('perguntas');cont.innerHTML='';
+  QS.forEach((q,i)=>{
+    const [lab,cls]=tipoLabel(q.tipo);
+    const div=document.createElement('div');div.className='qcard';
+    let html='<div class="qtop"><span class="qn">Questão '+(i+1)+' de 27</span><span class="tipo '+cls+'">'+lab+'</span></div><div class="qt">'+q.q+'</div>';
+    if(q.afirms&&q.tipo==='rom'){html+='<div class="afirms">'+q.afirms.map(a=>'<div>'+a+'</div>').join('')+'</div>';}
+    if(q.tipo==='mc'||q.tipo==='rom'){
+      q.o.forEach((op,j)=>{
+        const sel=estado.resp[i]===j;let oc='opt'+(sel?' sel':'');
+        if(estado.gabAberto){ if(j===q.c)oc='opt correta'; else if(sel)oc='opt errada-sel'; else oc='opt'; }
+        html+='<label class="'+oc+'"><input type="radio" name="q'+i+'" '+(sel?'checked':'')+' '+(estado.enviado?'disabled':'')+' onclick="marcarR('+i+','+j+')">'+op+'</label>';
+      });
+      if(estado.gabAberto){html+='<div class="expl show '+(0?'':'')+'"><b>Gabarito:</b> alternativa '+'ABCDE'[q.c]+'. '+q.e[q.c]+'</div>';}
+    }else if(q.tipo==='som'){
+      const r=estado.resp[i]||[];
+      html+='<div class="afirms">';
+      q.afirms.forEach((a,j)=>{
+        const v=q.vals[j];const ck=r.includes(v);
+        let extra='';
+        if(estado.gabAberto){extra=q.correct.includes(v)?' style="color:#1f9d57;font-weight:700;"':' style="color:#999;"';}
+        html+='<div'+extra+'><label style="cursor:pointer;"><input type="checkbox" '+(ck?'checked':'')+' '+(estado.enviado?'disabled':'')+' onclick="marcarS('+i+','+v+')"> '+a+(estado.gabAberto?(q.correct.includes(v)?' ✅':' ⬜'):'')+'</label></div>';
+      });
+      html+='</div>';
+      if(estado.gabAberto){html+='<div class="expl show ok"><b>Soma correta = '+q.soma+'.</b> '+q.e+'</div>';}
+    }else if(q.tipo==='disc'){
+      const val=(typeof estado.resp[i]==='string')?estado.resp[i]:'';
+      html+='<div class="disc"><textarea '+(estado.enviado?'readonly':'')+' oninput="marcarD('+i+',this.value)" placeholder="Escreva sua resposta aqui...">'+val.replace(/</g,'&lt;')+'</textarea></div>';
+      if(estado.gabAberto){html+='<div class="expl show modelo"><b>💡 Resposta-modelo (para a mãe corrigir):</b> '+q.modelo+'</div>';}
+    }
     div.innerHTML=html;cont.appendChild(div);
   });
-  document.getElementById('btnEnviar').disabled=estado.enviado||Object.keys(estado.resp).length<QUESTOES.length;
-  document.getElementById('btnEnviar').style.display=estado.enviado?'none':'inline-block';
-  if(estado.enviado){document.getElementById('codebar').classList.add('show');document.getElementById('codigo').textContent=estado.codigo;}
-  if(estado.liberado)mostrarPlacar();
+  let n=0;QS.forEach((q,i)=>{if(respondida(i))n++;});
+  document.getElementById('pnum').textContent=n+'/27';
+  document.getElementById('barraFill').style.width=(n/27*100)+'%';
+  document.getElementById('btnEnviar').disabled=(n<27||estado.enviado);
+  if(estado.enviado){
+    document.getElementById('btnEnviar').style.display='none';
+    document.getElementById('barraCod').style.display='block';
+    document.getElementById('codTopo').textContent=estado.codigo;
+    document.getElementById('resultado').style.display='block';
+    const ac=acertos();
+    document.getElementById('notaTxt').textContent=ac+'/'+AUTO;
+    document.getElementById('msgNota').textContent=ac>=21?'Excelente, quase gabaritou! 🌟':ac>=14?'Bom! Revise o que errou no gabarito.':'Bora revisar com a Leitura Guiada e o Resumo. 💩';
+    document.getElementById('codBox').style.display=estado.gabAberto?'none':'block';
+  }
 }
-function escolher(i,ai){if(estado.enviado)return;estado.resp[i]=ai;salvar();document.getElementById('btnEnviar').disabled=Object.keys(estado.resp).length<QUESTOES.length;document.querySelectorAll('[name=q'+i+']').forEach((r,ri)=>{r.closest('.alt').classList.toggle('sel',ri===ai);});}
-function enviar(){if(Object.keys(estado.resp).length<QUESTOES.length){alert('Responda as 25 questões antes de enviar. 😉');return;}if(!confirm('Enviar o simulado? Depois não dá para mudar.'))return;let ac=0;QUESTOES.forEach((q,i)=>{if(estado.resp[i]===q.c)ac++;});estado.enviado=true;estado.acertos=ac;estado.codigo=PREFIXO+'-'+pad2(ac)+'-'+letras2();salvar();render();window.scrollTo({top:0,behavior:'smooth'});}
-function liberar(){const v=document.getElementById('codeInput').value.trim().toUpperCase();if(v===estado.codigo){estado.liberado=true;salvar();render();document.getElementById('codeErro').textContent='';window.scrollTo({top:document.getElementById('placar').offsetTop-20,behavior:'smooth'});}else{document.getElementById('codeErro').textContent='Código diferente. Confira as letras e números. 🔍';}}
-function mostrarPlacar(){const p=document.getElementById('placar');p.classList.add('show');const pct=estado.acertos/QUESTOES.length;p.innerHTML='📊 Você acertou <b>'+estado.acertos+'</b> de <b>'+QUESTOES.length+'</b>! '+(pct>=0.8?'Excelente, pronta(o) para a prova! 🌟':(pct>=0.6?'Bom! Revise os que errou no Resumo. 💪':'Bora revisar o Resumo e a Leitura Guiada com calma. 📚'));}
-function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso_simulado_ciencias.json';a.click();}
-function importar(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{estado=Object.assign({resp:{},enviado:false,codigo:null,liberado:false},JSON.parse(e.target.result));salvar();render();alert('Progresso importado! ✅');}catch(err){alert('Arquivo inválido. 😕');}};r.readAsText(f);}
-function zerar(){if(!confirm('Isso apaga tudo para outra criança usar. Tem certeza?'))return;estado={resp:{},enviado:false,codigo:null,liberado:false,lastSaved:null};localStorage.removeItem(KEY);salvar();render();}
+function marcarR(i,j){if(estado.enviado)return;estado.resp[i]=j;salvar();render();}
+function marcarS(i,v){if(estado.enviado)return;let r=estado.resp[i]||[];if(r.includes(v))r=r.filter(x=>x!==v);else r=[...r,v];estado.resp[i]=r;salvar();render();}
+function marcarD(i,v){if(estado.enviado)return;estado.resp[i]=v;salvar();
+  let n=0;QS.forEach((q,k)=>{if(respondida(k))n++;});
+  document.getElementById('pnum').textContent=n+'/27';document.getElementById('barraFill').style.width=(n/27*100)+'%';
+  document.getElementById('btnEnviar').disabled=(n<27);}
+function enviar(){
+  let n=0;QS.forEach((q,i)=>{if(respondida(i))n++;});
+  if(n<27){alert('Responda todas as 27 questões antes de enviar!');return;}
+  if(!confirm('Enviar o simulado? Depois não dá para mudar as respostas.'))return;
+  estado.enviado=true;estado.codigo=gerarCodigo(acertos());salvar();render();window.scrollTo({top:0,behavior:'smooth'});
+}
+function liberarGab(){const v=document.getElementById('codInput').value.trim().toUpperCase();if(v===estado.codigo){estado.gabAberto=true;salvar();render();}else{document.getElementById('codErro').style.display='block';}}
+function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso_simulado_ciencias_bairros.json';a.click();}
+function importar(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{estado=Object.assign({resp:{},enviado:false},JSON.parse(e.target.result));salvar();render();alert('Progresso importado! ✅');}catch(err){alert('Arquivo inválido. 😕');}};r.readAsText(f);}
+function zerar(){if(!confirm('Isso apaga as respostas e o código para outra criança usar. Tem certeza?'))return;estado={resp:{},enviado:false,codigo:null,gabAberto:false,lastSaved:null};localStorage.removeItem(KEY);salvar();render();}
 carregar();render();mostrarSalvo();
 </script>
 </body>
